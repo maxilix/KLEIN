@@ -13,10 +13,14 @@
 //   64 BITS   //////////////////////////////////////////////
 typedef unsigned char	u_klein_64[8];
 
+char 	set_u_klein_64(u_klein_64 rop , char* str);
+void 	print_u_klein_64(u_klein_64 op);
+char 	set_nibble_64(u_klein_64 op , char i , char nibble);
+char 	get_nibble_64(u_klein_64 op , char i);
+
 char 	encryption_64(u_klein_64 cipher , u_klein_64 message , u_klein_64 key);
 char 	decryption_64(u_klein_64 message , u_klein_64 cipher , u_klein_64 key);
 
-char 	set_u_klein_64(u_klein_64 rop, char* str);
 
 
 //   80 BITS   //////////////////////////////////////////////
