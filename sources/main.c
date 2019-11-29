@@ -4,24 +4,16 @@
 
 int main(int argc, char const *argv[])
 {
-	u_klein_64 	message;
-	char 		result;
+	Key 		key;
+	Nibble		nibble;
 
-	result = set_u_klein_64(message, "0xab164f9cb31c0a91");
-
-	print_u_klein_64(message);
+	if(argc == 2)
+		;// read master_key and generates key
+	else
+		key_schedule(key, NULL);
+	for(int i = 0 ; i < 16 ; i++)
+		printf("Sbox[%d] = %d\n", i, Sbox[i]);
 	printf("\n");
-
-	printf("%x\n", get_nibble_64(message,0));
-	printf("%x\n", get_nibble_64(message,1));
-	printf("%x\n", get_nibble_64(message,2));
-	printf("%x\n", get_nibble_64(message,3));
-	printf("%x\n", get_nibble_64(message,15));
-
-	set_nibble_64(message , 3 , 0xe);
-
-	print_u_klein_64(message);
-	printf("\n");
-
+	display_key(key);
 	return 0;
 }
