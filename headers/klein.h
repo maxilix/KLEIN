@@ -9,43 +9,42 @@
 
 #define		NIBBLES_NB	16
 #define		ROUNDS_NB	12
+#define		SEED		15
 
-unsigned char 	*Sbox;
+extern const unsigned char 	Sbox[16];
 
 
-typedef	unsigned char	Nibble;
-typedef unsigned char	u_klein_64[16];		// each nibble is an unsigned char
-typedef	u_klein_64		Key[ROUNDS_NB + 1];
+typedef char			Bool;
+typedef	unsigned char	Nibble;				// each nibble is an unsigned char
+typedef Nibble			u_klein[16];
+typedef	u_klein			Key[ROUNDS_NB + 1];
 
 
 // utils.c
 
-void	u_klein_dcp(u_klein_64 a1, u_klein_64 a2);
-char	hex2char(Nibble hex);
-
-char 	set_u_klein_64(u_klein_64 rop , char* str);
-void 	print_u_klein_64(u_klein_64 op);
-char 	set_nibble_64(u_klein_64 op , char i , char nibble);
-char 	get_nibble_64(u_klein_64 op , char i);
+void	u_klein_dcp(u_klein rop, u_klein const op);
+char	hex2char(Nibble const hex);
+Nibble	char2nibble(char const c);
+Bool	str2u_klein(u_klein rop, char const *str);
 
 
 // encrypt.c
 
-char 	encryption_64(u_klein_64 cipher , u_klein_64 message , u_klein_64 key);
-char 	decryption_64(u_klein_64 message , u_klein_64 cipher , u_klein_64 key);
+char 	encryption_64(u_klein cipher , u_klein message , u_klein key);
+char 	decryption_64(u_klein message , u_klein cipher , u_klein key);
 
 
 // key_schedule.c
 
-void	key_schedule(Key key, u_klein_64 input_key);
-void	generate_master_key(u_klein_64 master_key);
-void	derive_new_subkey(u_klein_64 input, u_klein_64 output, int round);
+void	key_schedule(Key key, char const *input_key);
+void	random_master_key(u_klein master_key);
+void	derive_new_subkey(u_klein input, u_klein output, int round);
 
 
 // display.c
 
 void	display_key(Key key);
-void	display_u_klein(u_klein_64 uk);
+void	display_u_klein(u_klein uk);
 
 
 #endif
