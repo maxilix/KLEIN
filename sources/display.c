@@ -13,7 +13,7 @@ void	display_key(Key key)
 }
 
 
-void	display_u_klein(u_klein_64 uk)
+void	display_u_klein(u_klein uk)
 {
 	for(int i = 0 ; i < NIBBLES_NB ; i++)
 	{
