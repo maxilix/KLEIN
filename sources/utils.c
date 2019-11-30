@@ -62,3 +62,16 @@ Bool	str2u_klein(u_klein rop, char const *str)
 		rop[i] = char2nibble(str[i + 2]);
 	return 1;
 }
+
+
+int		u_klein_cmp(u_klein const op1, u_klein const op2)
+{
+	for(int i = 0 ; i < NIBBLES_NB ; i++)
+	{
+		if(op1[i] > op2[i])
+			return 1;
+		else if(op1[i] < op2[i])
+			return -1;
+	}
+	return 0;
+}

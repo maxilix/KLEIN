@@ -1,7 +1,7 @@
 #include	"../headers/klein.h"
 
 
-void	display_key(Key key)
+void	display_key(Key const key)
 {
 	for(int i = 0 ; i < ROUNDS_NB + 1 ; i++)
 	{
@@ -13,7 +13,7 @@ void	display_key(Key key)
 }
 
 
-void	display_u_klein(u_klein uk)
+void	display_u_klein(u_klein const uk)
 {
 	for(int i = 0 ; i < NIBBLES_NB ; i++)
 	{

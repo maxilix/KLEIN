@@ -27,7 +27,7 @@ void	random_master_key(u_klein master_key)
 }
 
 
-void	derive_new_subkey(u_klein input, u_klein output, int round)
+void	derive_new_subkey(u_klein const input, u_klein output, int round)
 {
 	int	i;
 
