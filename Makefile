@@ -4,8 +4,12 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = 	sources/main.c 		\
-		sources/klein.c 
+SRCS = 	sources/main.c 					\
+		sources/display.c 				\
+		sources/encrypt.c 				\
+		sources/key_schedule.c 			\
+		sources/reverse_key_schedule.c 	\
+		sources/utils.c
 
 
 all :

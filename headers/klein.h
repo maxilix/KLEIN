@@ -54,6 +54,26 @@ void	display_key(Key const key);
 void	display_u_klein(u_klein const uk);
 
 
+// encrypt.c
+void	add_round_key(u_klein rop , u_klein op , u_klein roundKey);
+void 	sub_nibbles(u_klein rop , u_klein op);
+void 	rotate_nibbles(u_klein rop , u_klein op);
+void 	unrotate_nibbles(u_klein rop , u_klein op);
+void 	mix_nibbles(u_klein rop , u_klein op);
+void 	unmix_nibbles(u_klein rop , u_klein op);
+
+unsigned char 	mul2(unsigned char op);
+unsigned char 	mul3(unsigned char op);
+unsigned char 	mul9(unsigned char op);
+unsigned char 	mul11(unsigned char op);
+unsigned char 	mul13(unsigned char op);
+unsigned char 	mul14(unsigned char op);
+
+void	encrypt(u_klein cipher , u_klein plain , Key key);
+void	decrypt(u_klein deciphered , u_klein cipher , Key key);
+
+
+
 #endif
 
 
