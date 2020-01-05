@@ -9,7 +9,8 @@ SRCS = 	sources/main.c 					\
 		sources/encrypt.c 				\
 		sources/key_schedule.c 			\
 		sources/reverse_key_schedule.c 	\
-		sources/utils.c
+		sources/utils.c					\
+		sources/seven_rounds_attack.c
 
 
 all :

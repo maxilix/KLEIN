@@ -75,3 +75,10 @@ int		u_klein_cmp(u_klein const op1, u_klein const op2)
 	}
 	return 0;
 }
+
+
+void	u_klein_xor(u_klein rop, u_klein const op1, u_klein const op2)
+{
+	for(int i = 0 ; i < NIBBLES_NB ; i++)
+		rop[i] = op1[i] ^ op2[i];
+}
