@@ -29,12 +29,6 @@ Bool	str2u_klein(u_klein rop, char const *str);
 int		u_klein_cmp(u_klein const op1, u_klein const op2);
 
 
-// encrypt.c
-
-char 	encryption_64(u_klein cipher , u_klein message , u_klein key);
-char 	decryption_64(u_klein message , u_klein cipher , u_klein key);
-
-
 // key_schedule.c
 
 void	key_schedule(Key key, char const *input_key);
@@ -55,6 +49,7 @@ void	display_u_klein(u_klein const uk);
 
 
 // encrypt.c
+
 void	add_round_key(u_klein rop , u_klein op , u_klein roundKey);
 void 	sub_nibbles(u_klein rop , u_klein op);
 void 	rotate_nibbles(u_klein rop , u_klein op);
@@ -73,6 +68,12 @@ void	encrypt(u_klein cipher , u_klein plain , Key key);
 void	decrypt(u_klein deciphered , u_klein cipher , Key key);
 
 
+// seven_rounds_attack.c
+
+int		sevenRoundsAttack(u_klein master_key);
+void	init_d(u_klein d);
+int		findGoodCouples(const u_klein d, u_klein good_couples[8][2]);
+void	halfkey(const unsigned long k);
 
 #endif
 
