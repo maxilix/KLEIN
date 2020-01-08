@@ -50,20 +50,34 @@ Bool	findGoodCouples(u_klein good_couples[GOOD_COUPLES_NB][4], u_klein const d)
 	int		cnt, i;
 	Bool	valid;
 
+	printf("Entering findGoodCouples ...\n");
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
 	{
+		//printf("\n\nTour n°%d\n\n", cnt);
 		for(i = 0 ; i < NIBBLES_NB ; i++)
 		{
 			m1[i] = rand() % 16;
 			m2[i] = m1[i] ^ d[i];
 		}
+		/*printf("m1 = ");
+		display_u_klein(m1);
+		printf("\nm2 = ");
+		display_u_klein(m2);*/
 		oracle(c1, m1);
 		oracle(c2, m2);
+		/*printf("\n\nc1 = ");
+		display_u_klein(c1);
+		printf("\nc2 = ");
+		display_u_klein(c2);*/
 		u_klein_xor(cipherDifferential, c1, c2);
+		/*printf("\n\nc1 XOR c2 =\t\t");
+		display_u_klein(cipherDifferential);*/
 		unmix_nibbles(tmp, cipherDifferential);
+		/*printf("\nUnmix(c1 ^ c2) =\t");
+		display_u_klein(tmp);*/
 		valid = 1;
-		for(i = 0 ; i < 8 ; i++)			// MACRO
+		for(i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
 			if(tmp[2 * i])
 			{
 				valid = 0;
@@ -80,6 +94,7 @@ Bool	findGoodCouples(u_klein good_couples[GOOD_COUPLES_NB][4], u_klein const d)
 			display_u_klein(m1);
 			printf("\n\n");
 		}
+		//cnt++; //TMP
 	}
 	return 1;
 }

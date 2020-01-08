@@ -2,6 +2,7 @@
 #define 	__KLEIN_H__
 
 
+#include	<unistd.h>
 #include 	<stdio.h>
 #include 	<stdlib.h>
 #include	<time.h>
@@ -52,6 +53,7 @@ Bool	reverse_round(u_klein const input, u_klein output, int round);
 
 void	display_key(Key const key);
 void	display_u_klein(u_klein const uk);
+void	display_good_couple(u_klein const m1);
 
 
 // encrypt.c

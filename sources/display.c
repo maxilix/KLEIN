@@ -22,3 +22,28 @@ void	display_u_klein(u_klein const uk)
 			printf(" ");
 	}
 }
+
+
+void	display_good_couple(u_klein const m1)
+{
+	u_klein	d;
+	u_klein	m2, c1, c2;
+	u_klein	cipherDifferential;
+	u_klein	verif;
+
+	init_d(d);
+	u_klein_xor(m2, m1, d);
+	oracle(c1, m1);
+	oracle(c2, m2);
+	u_klein_xor(cipherDifferential, c1, c2);
+	unmix_nibbles(verif, cipherDifferential);
+
+	printf("m1 = ");
+	display_u_klein(m1);
+	printf("\nm2 = ");
+	display_u_klein(m2);
+	getchar();
+	printf("\nUnmixNibbles(c1 XOR c2) = ");
+	display_u_klein(verif);
+	printf("\n");
+}

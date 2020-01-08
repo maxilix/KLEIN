@@ -6,10 +6,15 @@ const unsigned char 	Sbox[16] = {0x7, 0x4, 0xa, 0x9, 0x1, 0xf, 0xb, 0x0, 0xc, 0x
 
 int main()
 {
+	u_klein	m;
+
 	srand(time(NULL));
-	u_klein	master_key;
+	str2u_klein(m, "0x8DD7DDC36AB0075D");
+	display_good_couple(m);
+
+/*	u_klein	master_key;
 
 	sevenRoundsAttack(master_key);
-	display_u_klein(master_key);
+	display_u_klein(master_key);*/
 	return 0;
 }
