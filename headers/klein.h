@@ -14,7 +14,7 @@
 #define		MAX_LONG			4294967296
 #define		MASTER_KEY			"0x1111111111111111"
 #define		GOOD_COUPLES_NB		8
-#define		ERROR_THRESHOLD		2
+#define		ERROR_THRESHOLD		7
 
 extern const unsigned char 	Sbox[16];
 
