@@ -38,6 +38,7 @@ void	u_klein_xor(u_klein rop, u_klein const op1, u_klein const op2);
 // key_schedule.c
 
 void	key_schedule(Key key, u_klein const input_master_key);
+void	init_keys(Key keys);
 void	random_master_key(u_klein master_key);
 void	derive_new_subkey(u_klein const input, u_klein output, int round);
 
@@ -53,6 +54,9 @@ void	reverse_round(u_klein output, u_klein const input, int round);
 
 void	display_key(Key const key);
 void	display_u_klein(u_klein const uk);
+void	print_u_klein(u_klein const u, char *str);
+void	display_xor(u_klein const u1, u_klein const u2, char const *str);
+void	display_cipher_differential(u_klein m);
 
 
 // encrypt.c

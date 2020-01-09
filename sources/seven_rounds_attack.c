@@ -34,10 +34,9 @@ Bool	sevenRoundsAttack(u_klein master_key)
 
 
 
-	////////////////////////////////////////////////////////////
-	//printf("Good couples found in %ld ticks ! \n", clock() - t_start);		// clock
-	str2u_klein(k_tilde, "0x0000000000000000");				// Expected k_tilde : 0x0E08000506060E07 
-	for(long long k = 3890668135 ; k < 3892668136 ; k++)	// MAX_LONG ; k++) // test until 0x0A080A0E050F0800 = 2830000000‬
+	////////////////////////////////////////////////////////////		
+	str2u_klein(k_tilde, "0x0000000000000000");				// Expected k_tilde : 0x6EF8404546460E97
+	for(long long k = 3892668135 ; k < 3892668136 ; k++)	// MAX_LONG ; k++) // test until 0x0A080A0E050F0800 = 2830000000‬
 	{
 		halfkey(k_tilde, k);
 
@@ -50,10 +49,9 @@ Bool	sevenRoundsAttack(u_klein master_key)
 			printf("Good k_tilde found : ");
 			display_u_klein(k_tilde);
 			printf("\n");
-			//t_start = clock();			// clock
 			if(findFullKey(master_key, k_tilde, good_couples))
 				return 1;
-			printf("Unsuccessful\n");// bruteforce in %ld :c\n", clock() - t_start);	// clock
+			printf("Unsuccessful\n");
 		}
 	}
 	return 0;
@@ -124,7 +122,7 @@ Bool	findGoodCouples(u_klein good_couples[GOOD_COUPLES_NB][4], u_klein const d)
 
 void	halfkey(u_klein k_tilde, long long k)
 {
-	for(int i = 7 ; i >= 0 ; i--)
+	for(int i = NIBBLES_NB_DIV2 - 1 ; i >= 0 ; i--)
 	{
 		k_tilde[2 * i + 1] = k % 16;
 		k /= 16;
@@ -164,18 +162,17 @@ Bool 	verify_k_tilde(u_klein const k_tilde, u_klein const goodCouples[4])
 
 Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[GOOD_COUPLES_NB][4])
 {
-	u_klein 	test_key, masterKey, tmpCipher;
+	u_klein 	test_key, test_key_init_value, tmpCipher;
 	Key 		keys;
 	Bool 		validKey;
 
-	rotate_nibbles(test_key, k_tilde);
-	for(long long k = 0 ; k < MAX_LONG ; k++)
+	rotate_nibbles(test_key_init_value, k_tilde);
+	for(long long k = 1145309550 ; k < 1145309553 ; k++)
 	{
+		u_klein_dcp(test_key, test_key_init_value);
 		fillTestKey(test_key, k);
 		mix_nibbles(test_key, test_key);
-		//reverse_key_schedule();
-
-
+		full_reverse_key_schedule(keys, test_key);
 
 		validKey = 1;
 		for(int i = 0 ; i < GOOD_COUPLES_NB ; i++)
@@ -195,7 +192,7 @@ Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[
 		}
 		if (validKey)
 		{
-			u_klein_dcp(rop, masterKey);
+			u_klein_dcp(rop, keys[0]);
 			return 1;
 		}
 	}
@@ -220,7 +217,7 @@ void 	tildeToMaster(u_klein masterKey, u_klein const k_tilde)
 
 void 	fillTestKey(u_klein testKey, long long k)
 {
-	for(int i = NIBBLES_NB - 1 ; i >= 0 ; i--)
+	for(int i = NIBBLES_NB_DIV2 - 1 ; i >= 0 ; i--)
 	{
 		testKey[2 * i] = k % 16;
 		k /= 16;

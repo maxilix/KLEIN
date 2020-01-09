@@ -6,36 +6,20 @@ const unsigned char 	Sbox[16] = {0x7, 0x4, 0xa, 0x9, 0x1, 0xf, 0xb, 0x0, 0xc, 0x
 
 int main()
 {
-	Key 		keys;
-
+	u_klein	master_key;
+	u_klein	answer;
+	Key	keys;
 
 	srand(time(NULL));
-	u_klein	master_key;
-	//u_klein k_tilde;
-
-
-
-
-
-	//sevenRoundsAttack(master_key);
-	
-	str2u_klein(master_key, MASTER_KEY);
-	printf("Master : ");
-	display_u_klein(master_key);
-	printf("\n");
-
-	key_schedule(keys, master_key);
-
+	init_keys(keys);
 	display_key(keys);
-
-	/*unmix_nibbles(k_tilde , keys[7]);
-	unrotate_nibbles(k_tilde, k_tilde);
-
-	printf("k_tilde : ");
-	display_u_klein(k_tilde);
-	printf("\n");*/
-
-
+	printf("\n\n");
+	sevenRoundsAttack(master_key);
+	str2u_klein(answer, MASTER_KEY);
+	if(!u_klein_cmp(master_key, answer))
+		printf("YAY !!!\n");
+	else
+		printf(":c\n");
 	return 0;
 }
 
