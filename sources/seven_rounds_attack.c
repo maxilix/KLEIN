@@ -17,7 +17,6 @@ Bool	sevenRoundsAttack(u_klein master_key)
 	//if(!findGoodCouples(good_couples, d))
 	//	return 0;
 	////////////////////////////////////////////////////////////
-	u_klein 	tmp;
 	str2u_klein(good_couples[0][0], "0x9F13709593912BDD");
 	str2u_klein(good_couples[1][0], "0x5B2B253393C3D4BA");
 	str2u_klein(good_couples[2][0], "0x098AEA5D7C69465F");
@@ -31,31 +30,16 @@ Bool	sevenRoundsAttack(u_klein master_key)
 		u_klein_xor(good_couples[i][1], good_couples[i][0], d);
 		oracle(good_couples[i][2],good_couples[i][0]);
 		oracle(good_couples[i][3],good_couples[i][1]);
-		u_klein_xor(tmp, good_couples[i][2],good_couples[i][3]);
-		unmix_nibbles(tmp,tmp);
-		printf("i = %d\nm : ",i);
-		display_u_klein(good_couples[i][0]);
-		printf("\nxor unmix : ");
-		display_u_klein(tmp);
-		printf("\n\n");
 	}
 
 
 
 	////////////////////////////////////////////////////////////
 	//printf("Good couples found in %ld ticks ! \n", clock() - t_start);		// clock
-	str2u_klein(k_tilde, "0x0000000000000000");
-	for(long long k = 3892668135 ; k < 3892668136 ; k++) //MAX_LONG ; k++) // test until 0x0A080A0E050F0800 = 2830000000‬
+	str2u_klein(k_tilde, "0x0000000000000000");				// Expected k_tilde : 0x0E08000506060E07 
+	for(long long k = 3890668135 ; k < 3892668136 ; k++)	// MAX_LONG ; k++) // test until 0x0A080A0E050F0800 = 2830000000‬
 	{
 		halfkey(k_tilde, k);
-
-		//if(!(k%10000000))
-		//{
-			printf("k : ");
-			display_u_klein(k_tilde);
-			printf("\n");
-			printf("\n");
-		//}
 
 		cntError = 0; i = -1;
 		while(cntError <= ERROR_THRESHOLD && ++i < GOOD_COUPLES_NB)
@@ -110,7 +94,7 @@ Bool	findGoodCouples(u_klein good_couples[GOOD_COUPLES_NB][4], u_klein const d)
 
 
 		valid = 1;
-		for(i = 0 ; i < 8 ; i++)			// MACRO
+		for(i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
 			if(tmp[2 * i])
 			{
 				valid = 0;
@@ -150,42 +134,49 @@ void	halfkey(u_klein k_tilde, long long k)
 
 Bool 	verify_k_tilde(u_klein const k_tilde, u_klein const goodCouples[4])
 {
-	u_klein 	cipherDifferential, tmp;
-	
-	u_klein_xor(cipherDifferential, goodCouples[2], goodCouples[3]);
-	unmix_nibbles(tmp , cipherDifferential);
-	display_u_klein(tmp);
-	printf("\n");
-	unrotate_nibbles(tmp , tmp);
-	add_round_key(tmp , tmp , k_tilde);
-	sub_nibbles(tmp , tmp);
-	unmix_nibbles(tmp , tmp);
-	display_u_klein(tmp);
-	printf("\n");
+	u_klein 	cipherDifferential;
+
+
+	u_klein	c1, c2;
+
+	u_klein_dcp(c1, goodCouples[2]);
+	u_klein_dcp(c2, goodCouples[3]);
+
+	unmix_nibbles(c1, c1);
+	unmix_nibbles(c2, c2);
+	unrotate_nibbles(c1, c1);
+	unrotate_nibbles(c2, c2);
+	add_round_key(c1, c1, k_tilde);
+	add_round_key(c2, c2, k_tilde);
+	sub_nibbles(c1, c1);
+	sub_nibbles(c2, c2);
+	unmix_nibbles(c1, c1);
+	unmix_nibbles(c2, c2);
+
+	u_klein_xor(cipherDifferential, c1, c2);
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
-		if(tmp[2 * i])
-		{
-			printf("return 0\n\n");
+		if(cipherDifferential[2 * i])
 			return 0;
-		}
-	printf("return 1\n\n");
 	return 1;
 }
 
 
 Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[GOOD_COUPLES_NB][4])
 {
-	u_klein 	masterKey, tmpCipher;
+	u_klein 	test_key, masterKey, tmpCipher;
 	Key 		keys;
 	Bool 		validKey;
 
-	tildeToMaster(masterKey, k_tilde);
-
+	rotate_nibbles(test_key, k_tilde);
 	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
-		fillMasterKey(masterKey, k);
-		key_schedule(keys, masterKey);
+		fillTestKey(test_key, k);
+		mix_nibbles(test_key, test_key);
+		//reverse_key_schedule();
+
+
+
 		validKey = 1;
 		for(int i = 0 ; i < GOOD_COUPLES_NB ; i++)
 		{
@@ -217,16 +208,21 @@ void 	tildeToMaster(u_klein masterKey, u_klein const k_tilde)
 
 	rotate_nibbles(k , k_tilde);
 	mix_nibbles(k , k);
+
+	printf("Half k : ");
+	display_u_klein(k);
+	printf("\n");
+
 	reverse_key_schedule(masterKey, k, 7);
 }
 
 
 
-void 	fillMasterKey(u_klein masterKey, long long k)
+void 	fillTestKey(u_klein testKey, long long k)
 {
-	for(int i = 7 ; i >= 0 ; i--)
+	for(int i = NIBBLES_NB - 1 ; i >= 0 ; i--)
 	{
-		masterKey[2 * i] = k % 16;
+		testKey[2 * i] = k % 16;
 		k /= 16;
 	}
 }

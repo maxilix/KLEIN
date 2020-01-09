@@ -15,13 +15,19 @@ Bool	reverse_key_schedule(u_klein master_key, u_klein const round_key, int round
 }
 
 
-Bool	reverse_round(u_klein const input, u_klein output, int round)
+void	full_reverse_key_schedule(Key keys, u_klein const last_round_key)
 {
-	int		i;
-	u_klein	buf;
+	u_klein_dcp(keys[ROUNDS_NB], last_round_key);
+	for(int i = ROUNDS_NB ; i > 0 ; i--)
+		reverse_round(keys[i - 1], keys[i], i);
 
-	if(!input || !output)
-		return 0;
+}
+
+
+void	reverse_round(u_klein output, u_klein const input, int round)
+{
+	int		i, calculus_result;
+	u_klein	buf;
 
 	u_klein_dcp(output, input);
 	for(i = 10 ; i < 14 ; i++)
@@ -30,8 +36,8 @@ Bool	reverse_round(u_klein const input, u_klein output, int round)
 	u_klein_dcp(buf, output);
 	for(i = 0 ; i < 8 ; i++)
 	{
-		output[i + 8] = buf[(i + 6) % 8];
-		output[i] = buf[(i + 6) % 8] ^ buf[(i + 6) % 8 + 8];
+		calculus_result = i + 6 % 8;
+		output[i + 8] = buf[calculus_result];
+		output[i] = buf[calculus_result] ^ buf[calculus_result + 8];
 	}
-	return 1;
 }

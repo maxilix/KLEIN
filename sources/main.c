@@ -11,12 +11,14 @@ int main()
 
 	srand(time(NULL));
 	u_klein	master_key;
-	u_klein k_tilde;
+	//u_klein k_tilde;
 
 
 
-	sevenRoundsAttack(master_key);
-	/*
+
+
+	//sevenRoundsAttack(master_key);
+	
 	str2u_klein(master_key, MASTER_KEY);
 	printf("Master : ");
 	display_u_klein(master_key);
@@ -26,7 +28,7 @@ int main()
 
 	display_key(keys);
 
-	unmix_nibbles(k_tilde , keys[7]);
+	/*unmix_nibbles(k_tilde , keys[7]);
 	unrotate_nibbles(k_tilde, k_tilde);
 
 	printf("k_tilde : ");
