@@ -14,7 +14,7 @@
 #define		MAX_LONG			4294967296
 #define		MASTER_KEY			"0x1111111111111111"
 #define		GOOD_COUPLES_NB		8
-#define		ERROR_THRESHOLD		2
+#define		ERROR_THRESHOLD		0
 
 extern const unsigned char 	Sbox[16];
 
@@ -38,6 +38,7 @@ void	u_klein_xor(u_klein rop, u_klein const op1, u_klein const op2);
 // key_schedule.c
 
 void	key_schedule(Key key, u_klein const input_master_key);
+void	init_keys(Key keys);
 void	random_master_key(u_klein master_key);
 void	derive_new_subkey(u_klein const input, u_klein output, int round);
 
@@ -45,13 +46,17 @@ void	derive_new_subkey(u_klein const input, u_klein output, int round);
 // reverse_key_schedule.c
 
 Bool	reverse_key_schedule(u_klein master_key, u_klein const round_key, int round);
-Bool	reverse_round(u_klein const input, u_klein output, int round);
+void	full_reverse_key_schedule(Key keys, u_klein const last_round_key);
+void	reverse_round(u_klein output, u_klein const input, int round);
 
 
 // display.c
 
 void	display_key(Key const key);
 void	display_u_klein(u_klein const uk);
+void	print_u_klein(u_klein const u, char *str);
+void	display_xor(u_klein const u1, u_klein const u2, char const *str);
+void	display_cipher_differential(u_klein m);
 
 
 // encrypt.c
@@ -84,7 +89,15 @@ void	halfkey(u_klein k_tilde, long long k);
 Bool 	verify_k_tilde(u_klein const k_tilde, u_klein const goodCouples[4]);
 Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[GOOD_COUPLES_NB][4]);
 void 	tildeToMaster(u_klein masterKey, u_klein const k_tilde);
-void 	fillMasterKey(u_klein masterKey, long long k);
+void 	fillTestKey(u_klein masterKey, long long k);
+
+
+// test.c
+
+void	display_cipher_differential(u_klein m);
+void	display_xor(u_klein const u1, u_klein const u2, char const *str);
+void	display_last_round_ktilde(u_klein m1, u_klein m2, u_klein const last_round_key);
+void	init_keys(Key keys);
 
 
 #endif
