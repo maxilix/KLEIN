@@ -167,7 +167,7 @@ Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[
 	Bool 		validKey;
 
 	rotate_nibbles(test_key_init_value, k_tilde);
-	for(long long k = 1145309550 ; k < 1145309553 ; k++)
+	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
 		u_klein_dcp(test_key, test_key_init_value);
 		fillTestKey(test_key, k);
@@ -193,7 +193,7 @@ Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[
 		if (validKey)
 		{
 			u_klein_dcp(rop, keys[0]);
-			return 1;
+			//return 1;
 		}
 	}
 	return 0;

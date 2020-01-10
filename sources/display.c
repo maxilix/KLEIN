@@ -84,6 +84,4 @@ void	display_cipher_differential(u_klein m)
 	add_round_key(m1, m1, keys[ROUNDS_NB]);
 	add_round_key(m2, m2, keys[ROUNDS_NB]);
 	display_xor(m1, m2, "CIPHER_DIFFERENTIAL");
-
-	display_last_round_ktilde(buf1, buf2, keys[7]);
 }

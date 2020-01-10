@@ -92,14 +92,6 @@ void 	tildeToMaster(u_klein masterKey, u_klein const k_tilde);
 void 	fillTestKey(u_klein masterKey, long long k);
 
 
-// test.c
-
-void	display_cipher_differential(u_klein m);
-void	display_xor(u_klein const u1, u_klein const u2, char const *str);
-void	display_last_round_ktilde(u_klein m1, u_klein m2, u_klein const last_round_key);
-void	init_keys(Key keys);
-
-
 #endif
 
 
