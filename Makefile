@@ -10,6 +10,7 @@ SRCS = 	sources/display.c 				\
 		sources/reverse_key_schedule.c 	\
 		sources/utils.c					\
 		sources/seven_rounds_attack.c	\
+		sources/eight_rounds_attack.c	
 
 
 all :

@@ -1,4 +1,4 @@
-#include	"../headers/klein.h"
+#include	"../klein.h"
 
 
 void	display_key(Key const keys)

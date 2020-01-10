@@ -1,4 +1,4 @@
-#include	"../headers/klein.h"
+#include	"../klein.h"
 
 
 Bool	seven_rounds_attack(u_klein masterKey)

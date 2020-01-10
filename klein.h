@@ -91,6 +91,10 @@ Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples
 void 	fill_test_key(u_klein testKey, long long k);
 
 
+// eight_rounds_attack.c
+
+Bool	eight_rounds_attack(u_klein masterKey);
+
 #endif
 
 
