@@ -43,65 +43,65 @@ void 	unrotate_nibbles(u_klein rop , u_klein const op)
 
 void 	mix_nibbles(u_klein rop , u_klein const op)
 {
-	unsigned char 	op_left[NIBBLES_NB_DIV4];
-	unsigned char 	op_right[NIBBLES_NB_DIV4];
-	unsigned char 	rop_left[NIBBLES_NB_DIV4];
-	unsigned char 	rop_right[NIBBLES_NB_DIV4];
+	unsigned char 	opLeft[NIBBLES_NB_DIV4];
+	unsigned char 	opRight[NIBBLES_NB_DIV4];
+	unsigned char 	ropLeft[NIBBLES_NB_DIV4];
+	unsigned char 	ropRight[NIBBLES_NB_DIV4];
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV4 ; i++)
 	{
-		op_left[i]  = 16*op[2*i]              + op[2*i+1];
-		op_right[i] = 16*op[2*i+NIBBLES_NB_DIV2] + op[2*i+1+NIBBLES_NB_DIV2];
+		opLeft[i]  = 16*op[2*i]              + op[2*i+1];
+		opRight[i] = 16*op[2*i+NIBBLES_NB_DIV2] + op[2*i+1+NIBBLES_NB_DIV2];
 	}
 
-	rop_left[0] = mul2(op_left[0]) ^ mul3(op_left[1]) ^      op_left[2]  ^      op_left[3] ;
-	rop_left[1] =      op_left[0]  ^ mul2(op_left[1]) ^ mul3(op_left[2]) ^      op_left[3] ;
-	rop_left[2] =      op_left[0]  ^      op_left[1]  ^ mul2(op_left[2]) ^ mul3(op_left[3]);
-	rop_left[3] = mul3(op_left[0]) ^      op_left[1]  ^      op_left[2]  ^ mul2(op_left[3]);
+	ropLeft[0] = mul2(opLeft[0]) ^ mul3(opLeft[1]) ^      opLeft[2]  ^      opLeft[3] ;
+	ropLeft[1] =      opLeft[0]  ^ mul2(opLeft[1]) ^ mul3(opLeft[2]) ^      opLeft[3] ;
+	ropLeft[2] =      opLeft[0]  ^      opLeft[1]  ^ mul2(opLeft[2]) ^ mul3(opLeft[3]);
+	ropLeft[3] = mul3(opLeft[0]) ^      opLeft[1]  ^      opLeft[2]  ^ mul2(opLeft[3]);
 
-	rop_right[0] = mul2(op_right[0]) ^ mul3(op_right[1]) ^      op_right[2]  ^      op_right[3] ;
-	rop_right[1] =      op_right[0]  ^ mul2(op_right[1]) ^ mul3(op_right[2]) ^      op_right[3] ;
-	rop_right[2] =      op_right[0]  ^      op_right[1]  ^ mul2(op_right[2]) ^ mul3(op_right[3]);
-	rop_right[3] = mul3(op_right[0]) ^      op_right[1]  ^      op_right[2]  ^ mul2(op_right[3]);
+	ropRight[0] = mul2(opRight[0]) ^ mul3(opRight[1]) ^      opRight[2]  ^      opRight[3] ;
+	ropRight[1] =      opRight[0]  ^ mul2(opRight[1]) ^ mul3(opRight[2]) ^      opRight[3] ;
+	ropRight[2] =      opRight[0]  ^      opRight[1]  ^ mul2(opRight[2]) ^ mul3(opRight[3]);
+	ropRight[3] = mul3(opRight[0]) ^      opRight[1]  ^      opRight[2]  ^ mul2(opRight[3]);
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV4 ; i++)
 	{
-		rop[2*i] 					= rop_left[i]/16;
-		rop[2*i + 1] 				= rop_left[i]%16;
-		rop[2*i + NIBBLES_NB/2] 	= rop_right[i]/16;
-		rop[2*i + 1 + NIBBLES_NB/2] = rop_right[i]%16;
+		rop[2*i] 					= ropLeft[i]/16;
+		rop[2*i + 1] 				= ropLeft[i]%16;
+		rop[2*i + NIBBLES_NB/2] 	= ropRight[i]/16;
+		rop[2*i + 1 + NIBBLES_NB/2] = ropRight[i]%16;
 	}
 }
 
 void 	unmix_nibbles(u_klein rop , u_klein const op)
 {
-	unsigned char 	op_left[NIBBLES_NB/4];
-	unsigned char 	op_right[NIBBLES_NB/4];
-	unsigned char 	rop_left[NIBBLES_NB/4];
-	unsigned char 	rop_right[NIBBLES_NB/4];
+	unsigned char 	opLeft[NIBBLES_NB/4];
+	unsigned char 	opRight[NIBBLES_NB/4];
+	unsigned char 	ropLeft[NIBBLES_NB/4];
+	unsigned char 	ropRight[NIBBLES_NB/4];
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV4 ; i++)
 	{
-		op_left[i]  = 16*op[2*i]              + op[2*i+1];
-		op_right[i] = 16*op[2*i+NIBBLES_NB/2] + op[2*i+1+NIBBLES_NB/2];
+		opLeft[i]  = 16*op[2*i]              + op[2*i+1];
+		opRight[i] = 16*op[2*i+NIBBLES_NB/2] + op[2*i+1+NIBBLES_NB/2];
 	}
 
-	rop_left[0] = mul14(op_left[0]) ^ mul11(op_left[1]) ^ mul13(op_left[2]) ^  mul9(op_left[3]);
-	rop_left[1] =  mul9(op_left[0]) ^ mul14(op_left[1]) ^ mul11(op_left[2]) ^ mul13(op_left[3]);
-	rop_left[2] = mul13(op_left[0]) ^  mul9(op_left[1]) ^ mul14(op_left[2]) ^ mul11(op_left[3]);
-	rop_left[3] = mul11(op_left[0]) ^ mul13(op_left[1]) ^  mul9(op_left[2]) ^ mul14(op_left[3]);
+	ropLeft[0] = mul14(opLeft[0]) ^ mul11(opLeft[1]) ^ mul13(opLeft[2]) ^  mul9(opLeft[3]);
+	ropLeft[1] =  mul9(opLeft[0]) ^ mul14(opLeft[1]) ^ mul11(opLeft[2]) ^ mul13(opLeft[3]);
+	ropLeft[2] = mul13(opLeft[0]) ^  mul9(opLeft[1]) ^ mul14(opLeft[2]) ^ mul11(opLeft[3]);
+	ropLeft[3] = mul11(opLeft[0]) ^ mul13(opLeft[1]) ^  mul9(opLeft[2]) ^ mul14(opLeft[3]);
 
-	rop_right[0] = mul14(op_right[0]) ^ mul11(op_right[1]) ^ mul13(op_right[2]) ^  mul9(op_right[3]);
-	rop_right[1] =  mul9(op_right[0]) ^ mul14(op_right[1]) ^ mul11(op_right[2]) ^ mul13(op_right[3]);
-	rop_right[2] = mul13(op_right[0]) ^  mul9(op_right[1]) ^ mul14(op_right[2]) ^ mul11(op_right[3]);
-	rop_right[3] = mul11(op_right[0]) ^ mul13(op_right[1]) ^  mul9(op_right[2]) ^ mul14(op_right[3]);
+	ropRight[0] = mul14(opRight[0]) ^ mul11(opRight[1]) ^ mul13(opRight[2]) ^  mul9(opRight[3]);
+	ropRight[1] =  mul9(opRight[0]) ^ mul14(opRight[1]) ^ mul11(opRight[2]) ^ mul13(opRight[3]);
+	ropRight[2] = mul13(opRight[0]) ^  mul9(opRight[1]) ^ mul14(opRight[2]) ^ mul11(opRight[3]);
+	ropRight[3] = mul11(opRight[0]) ^ mul13(opRight[1]) ^  mul9(opRight[2]) ^ mul14(opRight[3]);
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV4 ; i++)
 	{
-		rop[2*i] 					= rop_left[i]/16;
-		rop[2*i + 1] 				= rop_left[i]%16;
-		rop[2*i + NIBBLES_NB/2] 	= rop_right[i]/16;
-		rop[2*i + 1 + NIBBLES_NB/2] = rop_right[i]%16;
+		rop[2*i] 					= ropLeft[i]/16;
+		rop[2*i + 1] 				= ropLeft[i]%16;
+		rop[2*i + NIBBLES_NB/2] 	= ropRight[i]/16;
+		rop[2*i + 1 + NIBBLES_NB/2] = ropRight[i]%16;
 	}
 }
 
@@ -172,15 +172,15 @@ void	decrypt(u_klein deciphered , u_klein const cipher , Key const key)
 
 void	oracle(u_klein cipher, u_klein const plain)
 {
-	static Bool		first_time = 1;
+	static Bool		firstTime = 1;
 	static Key		key;
 	static u_klein	masterKey;
 
-	if(first_time)
+	if(firstTime)
 	{
 		str2u_klein(masterKey, MASTER_KEY);
 		key_schedule(key, masterKey);
 	}
-	first_time = 0;
+	firstTime = 0;
 	encrypt(cipher, plain, key);
 }
