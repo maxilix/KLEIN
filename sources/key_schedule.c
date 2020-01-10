@@ -13,7 +13,7 @@ void	init_keys(Key keys)
 {
 	u_klein	masterKey;
 
-	str2u_klein(masterKey, masterKey);
+	str2u_klein(masterKey, MASTER_KEY);
 	key_schedule(keys, masterKey);
 }
 

@@ -1,7 +1,7 @@
 #include	"../headers/klein.h"
 
 
-Bool	sevenRoundsAttack(u_klein masterKey)
+Bool	seven_rounds_attack(u_klein masterKey)
 {
 	u_klein		goodCouples[GOOD_COUPLES_NB][4];
 	u_klein		d;
@@ -12,7 +12,7 @@ Bool	sevenRoundsAttack(u_klein masterKey)
 
 
 	////////////////////////////////////////////////////////////
-	//if(!findGoodCouples(goodCouples, d))
+	//if(!find_good_couples(goodCouples, d))
 	//	return 0;
 	////////////////////////////////////////////////////////////
 	str2u_klein(goodCouples[0][0], "0x9F13709593912BDD");
@@ -65,7 +65,7 @@ void	init_d(u_klein d)
 }
 
 
-Bool	findGoodCouples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
+Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
 	// si bon fichier existe, lire le fichier pour remplir le tableau goodCoules
 	// sinon brute force sur la recherche de couple puis ecriture fichier, puis remplissage tableau !
@@ -196,21 +196,6 @@ Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples
 	}
 	return 0;
 }
-
-/*void 	tildeToMaster(u_klein masterKey, u_klein const kTilde)
-{
-	u_klein 	k;
-
-	rotate_nibbles(k , kTilde);
-	mix_nibbles(k , k);
-
-	printf("Half k : ");
-	display_u_klein(k);
-	printf("\n");
-
-	reverse_key_schedule(masterKey, k, 7);
-}*/
-
 
 
 void 	fill_test_key(u_klein testKey, long long k)

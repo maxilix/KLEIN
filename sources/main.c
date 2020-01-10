@@ -14,7 +14,7 @@ int main()
 	init_keys(keys);
 	display_key(keys);
 	printf("\n\n");
-	sevenRoundsAttack(master_key);
+	seven_rounds_attack(master_key);
 	str2u_klein(answer, MASTER_KEY);
 	if(!u_klein_cmp(master_key, answer))
 		printf("YAY !!!\n");

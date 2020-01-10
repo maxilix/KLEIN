@@ -82,14 +82,13 @@ void	oracle(u_klein cipher, u_klein const plain);
 
 // seven_rounds_attack.c
 
-Bool	sevenRoundsAttack(u_klein master_key);
+Bool	seven_rounds_attack(u_klein masterKey);
 void	init_d(u_klein d);
-Bool	findGoodCouples(u_klein good_couples[GOOD_COUPLES_NB][4], u_klein const d);
-void	halfkey(u_klein k_tilde, long long k);
-Bool 	verify_k_tilde(u_klein const k_tilde, u_klein const goodCouples[4]);
-Bool 	findFullKey(u_klein rop, u_klein const k_tilde, u_klein const goodCouples[GOOD_COUPLES_NB][4]);
-void 	tildeToMaster(u_klein masterKey, u_klein const k_tilde);
-void 	fillTestKey(u_klein masterKey, long long k);
+Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
+void	halfkey(u_klein kTilde, long long k);
+Bool 	verify_kTilde(u_klein const kTilde, u_klein const goodCouples[4]);
+Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples[GOOD_COUPLES_NB][4]);
+void 	fill_test_key(u_klein testKey, long long k);
 
 
 #endif
