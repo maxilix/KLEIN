@@ -1,11 +1,11 @@
 #include	"../headers/klein.h"
 
 
-void	key_schedule(Key key, u_klein const input_masterKey)
+void	key_schedule(Key keys, u_klein const input_masterKey)
 {
-	u_klein_dcp(key[0], input_masterKey);
+	u_klein_dcp(keys[0], input_masterKey);
 	for(int i = 0 ; i < ROUNDS_NB ; i++)
-		derive_new_subkey(key[i], key[i + 1], i + 1);
+		derive_new_subkey(keys[i], keys[i + 1], i + 1);
 }
 
 

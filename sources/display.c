@@ -1,12 +1,12 @@
 #include	"../headers/klein.h"
 
 
-void	display_key(Key const key)
+void	display_key(Key const keys)
 {
 	for(int i = 0 ; i < ROUNDS_NB + 1 ; i++)
 	{
 		printf("K_%d : ", i);
-		display_u_klein(key[i]);
+		display_u_klein(keys[i]);
 		printf("%s", i % 2 == 0 ? "\t\t" : "\n");
 	}
 	printf("\n");
