@@ -48,7 +48,7 @@ Nibble	char2nibble(char const c)
 		case 'F' :
 			return c - 'A' + 10;
 		default :
-			printf("Error in char 2 nibble - wrong input\n");
+			printf("Error in char2nibble - wrong input\n");
 			return 255;
 	}
 }
