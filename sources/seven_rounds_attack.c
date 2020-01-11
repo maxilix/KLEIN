@@ -67,7 +67,7 @@ Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 	u_klein		m1, m2, c1, c2;
 	u_klein		tmp, cipherDifferential;
 	int			cnt, i;
-	long long 	nbTest;
+	long long 	nbTest=0;
 	Bool		valid;
 
 	if(extract_couples_from_file(goodCouples, d))		
@@ -82,11 +82,19 @@ Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 			m1[i] = rand() % 16;
 			m2[i] = m1[i] ^ d[i];
 		}
+		//random_u_klein(m1);
+		//u_klein_xor(m2, m1, d);
 
 		oracle(c1, m1);
 		oracle(c2, m2);
 		u_klein_xor(cipherDifferential, c1, c2);
 		unmix_nibbles(tmp, cipherDifferential);
+
+		if (!(nbTest%10000000))
+		{
+			printf("test number : %lld\n", nbTest);
+			return 0;
+		}
 
 		valid = 1;
 		for(i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
@@ -131,6 +139,7 @@ Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein 
 		oracle(goodCouples[i][3], goodCouples[i][1]);
 	}
 	fclose(fd);
+	printf("goodCouples extract from %s\n", filename);
 	return 1;
 }
 

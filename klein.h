@@ -8,14 +8,19 @@
 
 
 #define		NIBBLES_NB				16
-#define		NIBBLES_NB_DIV2			8
-#define		NIBBLES_NB_DIV4			4
+#define		NIBBLES_NB_DIV2			NIBBLES_NB/2
+#define		NIBBLES_NB_DIV4			NIBBLES_NB/4
 #define		ROUNDS_NB				7
 #define		MAX_LONG				4294967296
-#define		UKLEIN_STRING_LENGTH	18
+#define		UKLEIN_STRING_LENGTH	NIBBLES_NB+2
 #define		MASTER_KEY				"0x1111111111111111"
 #define		GOOD_COUPLES_NB			8
-#define		ERROR_THRESHOLD			0
+#define		ERROR_THRESHOLD			2
+
+#define 	KNUTH_LEWIS_GENERATOR_A 	1664525
+#define 	KNUTH_LEWIS_GENERATOR_C 	1013904223
+#define 	KNUTH_LEWIS_GENERATOR_M 	4294967296
+
 
 extern const unsigned char 	Sbox[16];
 
@@ -96,6 +101,14 @@ void 	fill_test_key(u_klein testKey, long long k);
 // eight_rounds_attack.c
 
 Bool	eight_rounds_attack(u_klein masterKey);
+
+
+
+
+// prng_knuth_lewis.c
+
+void 			random_u_klein(u_klein rop);
+unsigned long 	random_kl();
 
 #endif
 

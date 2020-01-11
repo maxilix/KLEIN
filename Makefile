@@ -10,7 +10,8 @@ SRCS = 	sources/display.c 				\
 		sources/reverse_key_schedule.c 	\
 		sources/utils.c					\
 		sources/seven_rounds_attack.c	\
-		sources/eight_rounds_attack.c	
+		sources/eight_rounds_attack.c	\
+		sources/prng_knuth_lewis.c
 
 
 all :
@@ -20,7 +21,7 @@ test :
 	$(CC) $(CFLAGS) sources/testmain.c $(SRCS) -o $(NAME)
 
 Wless :
-	$(CC) $(SRCS) -o $(NAME)
+	$(CC) sources/main.c $(SRCS) -o $(NAME)
 
 fclean :
 	rm -f $(NAME)
