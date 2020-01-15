@@ -123,14 +123,10 @@ Bool	verify_good_couple_condition(u_klein m1, u_klein m2)
 
 void	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt)
 {
-	u_klein	c1, c2;
-	
 	u_klein_dcp(goodCouples[cnt][0], m1);
 	u_klein_dcp(goodCouples[cnt][1], m2);
-	oracle(c1, m1);
-	oracle(c2, m2);
-	u_klein_dcp(goodCouples[cnt][2], c1);
-	u_klein_dcp(goodCouples[cnt][3], c2);
+	oracle(goodCouples[cnt][2], m1);
+	oracle(goodCouples[cnt][3], m2);
 }
 
 

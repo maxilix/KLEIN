@@ -23,8 +23,8 @@ Bool		eight_rounds_attack(u_klein masterKey)
 		oracle(goodCouples[i][3],goodCouples[i][1]);
 	}
 		
-	str2u_klein(kTilde, "0x0000000000000000");	// Expected kTilde : 0x6EF8404546460E97
-	for(long long k = 0 ; k < MAX_LONG ; k++)	// test until 0x0A080A0E050F0800 = 2830000000‬
+	str2u_klein(kTilde, "0x0000000000000000");
+	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
 		halfkey(kTilde, k);
 		isValid = 1;
@@ -51,6 +51,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 	u_klein			m1, m2;
 	int				cnt, i, index;
 	unsigned long	rd;
+	long long 		compteurTEST=0;
 
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
@@ -58,6 +59,12 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
 	{
+
+		compteurTEST++;
+		if(!(compteurTEST%10000000))
+			printf("nombre de test : %lld\n",compteurTEST);
+
+
 		for(int j = 0 ; j < 2 ; j++)
 		{
 			rd = (unsigned long)rand();
@@ -71,8 +78,8 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 		}
 		if(verify_good_couple_condition(m1, m2))
 		{
+			print_u_klein(m1,"Un couple candidat trouvé, m1 = ");
 			u_klein_dcp(goodCouples[cnt][0], m1);
-			u_klein_dcp(goodCouples[cnt][1], m2);
 			if(verify_good_couple(goodCouples))
 				cnt += 4;
 		}
@@ -107,47 +114,61 @@ static Bool		extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], 
 
 Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 {
+	printf("\tEntrée dans verify_good_couple\n");
 	static int	index = 0;
 	int			cnt;
 	u_klein		m1, m2;
+	u_klein		d;
+	long long 	compteurTEST=0;
 
-	print_u_klein(m1, "Celui là vérifie la condition");
+	init_d(d);
+	u_klein_dcp(m1, goodCouples[index][0]);
 	cnt = 0;
 	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
-		if(k == MAX_LONG_DIV2 && !cnt)
+		compteurTEST++;
+		if(!(compteurTEST%10000000))
+			printf("\tnombre de test : %lld\n",compteurTEST);
+
+		if(k == MAX_LONG_DIV2 && cnt == 0)
+		{
+			printf("\tArret car k grand et cnt = 0\n");
 			break;
-		neutral_byte_modification(m1, goodCouples[index][0], k);
-		neutral_byte_modification(m2, goodCouples[index][1], k);
+		}
+		if (cnt == 4)
+		{
+			printf("\tArret car cnt = 4\n");
+			break;
+		}
+		neutral_byte_modification(m1, k);
+		u_klein_xor(m2, m1, d);
 		if(verify_good_couple_condition(m1, m2))
 		{
+			print_u_klein(m1,"\t Un nouveau : ");
 			add_good_couple(goodCouples, m1, m2, index + cnt);
 			cnt++;
 		}
 	}
-	if(cnt >= 4)
+	if(cnt == 4)
 	{
-		printf("Wahou ! On en a chopé 4 :3\n");
+		printf("\tWahou ! On en a chopé 4 :3\n");
+		index += 4;
 		return 1;
 	}
-	if(cnt >= 2)
-		printf("OUCH\n");
+	if(cnt >= 3)
+		printf("\tOUCH\n");
 	return 0;
 }
 
 
-void	neutral_byte_modification(u_klein rop, u_klein op, long long k)
+void	neutral_byte_modification(u_klein rop, long long k)
 {
-	int	i;
+	int		i;
 
 	for(i = 0 ; i < NIBBLES_NB ; i++)
-	{
-		if((i + 4) % 16 < NIBBLES_NB_DIV2)
+		if((i + 4) % 16 < 8)	// if in 4 first nibbles or 4 last nibbles
 		{
 			rop[i] = k % 16;
 			k /= 16;
 		}
-		else
-			rop[i] = op[i];
-	}
 }

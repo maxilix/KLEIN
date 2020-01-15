@@ -99,7 +99,7 @@ void 		fill_test_key(u_klein testKey, long long k);
 
 Bool		eight_rounds_attack(u_klein masterKey);
 Bool		verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4]);
-void		neutral_byte_modification(u_klein rop, u_klein op, long long k);
+void		neutral_byte_modification(u_klein rop, long long k);
 
 
 #endif
