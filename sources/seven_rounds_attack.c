@@ -1,4 +1,6 @@
 #include	"../klein.h"
+static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
+static Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
 
 
 Bool	seven_rounds_attack(u_klein masterKey)
@@ -10,25 +12,15 @@ Bool	seven_rounds_attack(u_klein masterKey)
 
 	init_d(d);
 
-
 	if(!find_good_couples(goodCouples, d))
 		return 0;
-	/*str2u_klein(goodCouples[0][0], "0x9F13709593912BDD");
-	str2u_klein(goodCouples[1][0], "0x5B2B253393C3D4BA");
-	str2u_klein(goodCouples[2][0], "0x098AEA5D7C69465F");
-	str2u_klein(goodCouples[3][0], "0xE25AD55EAF1307FE");
-	str2u_klein(goodCouples[4][0], "0xA23EAD6BA128928B");
-	str2u_klein(goodCouples[5][0], "0x193203E283C4857B");
-	str2u_klein(goodCouples[6][0], "0xD77D5B058E870CBF");
-	str2u_klein(goodCouples[7][0], "0x4982C8219FCD6992");*/
-	for(i = 0 ; i < 8 ; i++)
+
+	for(i = 0 ; i < GOOD_COUPLES_NB ; i++)
 	{
 		u_klein_xor(goodCouples[i][1], goodCouples[i][0], d);
 		oracle(goodCouples[i][2],goodCouples[i][0]);
 		oracle(goodCouples[i][3],goodCouples[i][1]);
 	}
-
-
 		
 	str2u_klein(kTilde, "0x0000000000000000");	// Expected kTilde : 0x6EF8404546460E97
 	for(long long k = 0 ; k < MAX_LONG ; k++)	// test until 0x0A080A0E050F0800 = 2830000000‬
@@ -53,16 +45,7 @@ Bool	seven_rounds_attack(u_klein masterKey)
 }
 
 
-void	init_d(u_klein d)
-{
-	d[0] = 0;
-	d[1] = 0xb;
-	for(int i = 2 ; i < NIBBLES_NB ; i++)
-		d[i] = 0;
-}
-
-
-Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
+static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
 	u_klein		m1, m2, c1, c2;
 	u_klein		tmp, cipherDifferential;
@@ -76,19 +59,8 @@ Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
 	{
-		nbTest++;
-		for(i = 0 ; i < NIBBLES_NB ; i++)
-		{
-			m1[i] = rand() % 16;
-			m2[i] = m1[i] ^ d[i];
-		}
-		//random_u_klein(m1);
-		//u_klein_xor(m2, m1, d);
-
-		oracle(c1, m1);
-		oracle(c2, m2);
-		u_klein_xor(cipherDifferential, c1, c2);
-		unmix_nibbles(tmp, cipherDifferential);
+		random_u_klein(m1);
+		u_klein_xor(m2, m1, d);
 
 		if (!(nbTest%10000000))
 		{
@@ -96,30 +68,18 @@ Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 			return 0;
 		}
 
-		valid = 1;
-		for(i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
-			if(tmp[2 * i])
-			{
-				valid = 0;
-				break;
-			}
-		if(valid)
+		if(verify_good_couple_condition(m1, m2))
 		{
-			u_klein_dcp(goodCouples[cnt][0], m1);
-			u_klein_dcp(goodCouples[cnt][1], m2);
-			u_klein_dcp(goodCouples[cnt][2], c1);
-			u_klein_dcp(goodCouples[cnt][3], c2);
+			add_good_couple(goodCouples, m1, m2, cnt);
 			cnt++;
-			printf("\nJ'en ai trouvé un : ");
-			display_u_klein(m1);
-			printf("\n");
+			print_u_klein(m1, "Good couple found");
 		}
 	}
 	return 1;
 }
 
 
-Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
+static Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
 	FILE	*fd;
 	char	filename[UKLEIN_STRING_LENGTH + 27];
@@ -141,6 +101,41 @@ Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein 
 	fclose(fd);
 	printf("goodCouples extract from %s\n", filename);
 	return 1;
+}
+
+
+Bool	verify_good_couple_condition(u_klein m1, u_klein m2)
+{
+	u_klein	c1, c2;
+	u_klein	cipherDifferential;
+
+	oracle(c1, m1);
+	oracle(c2, m2);
+	u_klein_xor(cipherDifferential, c1, c2);
+	unmix_nibbles(cipherDifferential, cipherDifferential);
+
+	for(int i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
+		if(cipherDifferential[2 * i])
+			return 0;
+	return 1;
+}
+
+
+void	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt)
+{
+	u_klein_dcp(goodCouples[cnt][0], m1);
+	u_klein_dcp(goodCouples[cnt][1], m2);
+	oracle(goodCouples[cnt][2], m1);
+	oracle(goodCouples[cnt][3], m2);
+}
+
+
+void	init_d(u_klein d)
+{
+	d[0] = 0;
+	d[1] = 0xb;
+	for(int i = 2 ; i < NIBBLES_NB ; i++)
+		d[i] = 0;
 }
 
 

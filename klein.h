@@ -8,11 +8,12 @@
 
 
 #define		NIBBLES_NB				16
-#define		NIBBLES_NB_DIV2			NIBBLES_NB/2
-#define		NIBBLES_NB_DIV4			NIBBLES_NB/4
-#define		ROUNDS_NB				7
+#define		NIBBLES_NB_DIV2			8
+#define		NIBBLES_NB_DIV4			4
+#define		ROUNDS_NB				8
 #define		MAX_LONG				4294967296
-#define		UKLEIN_STRING_LENGTH	NIBBLES_NB+2
+#define		MAX_LONG_DIV2			2147483648
+#define		UKLEIN_STRING_LENGTH	18
 #define		MASTER_KEY				"0x1111111111111111"
 #define		GOOD_COUPLES_NB			8
 #define		ERROR_THRESHOLD			2
@@ -39,6 +40,7 @@ Nibble	char2nibble(char const c);
 Bool	str2u_klein(u_klein rop, char const *str);
 int		u_klein_cmp(u_klein const op1, u_klein const op2);
 void	u_klein_xor(u_klein rop, u_klein const op1, u_klein const op2);
+void	init_d(u_klein d);
 
 
 // key_schedule.c
@@ -88,19 +90,22 @@ void	oracle(u_klein cipher, u_klein const plain);
 
 // seven_rounds_attack.c
 
-Bool	seven_rounds_attack(u_klein masterKey);
-void	init_d(u_klein d);
-Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
-Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
-void	halfkey(u_klein kTilde, long long k);
-Bool 	verify_kTilde(u_klein const kTilde, u_klein const goodCouples[4]);
-Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples[GOOD_COUPLES_NB][4]);
-void 	fill_test_key(u_klein testKey, long long k);
+Bool		seven_rounds_attack(u_klein masterKey);
+Bool		verify_good_couple_condition(u_klein m1, u_klein m2);
+void		add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt);
+void		init_d(u_klein d);
+void		halfkey(u_klein kTilde, long long k);
+Bool 		verify_kTilde(u_klein const kTilde, u_klein const goodCouples[4]);
+Bool 		find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples[GOOD_COUPLES_NB][4]);
+void 		fill_test_key(u_klein testKey, long long k);
 
 
 // eight_rounds_attack.c
 
-Bool	eight_rounds_attack(u_klein masterKey);
+Bool		eight_rounds_attack(u_klein masterKey);
+Bool		verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4]);
+void		neutral_byte_modification(u_klein rop, long long k);
+
 
 
 
