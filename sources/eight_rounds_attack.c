@@ -130,6 +130,8 @@ Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 		printf("Wahou ! On en a chopé 4 :3\n");
 		return 1;
 	}
+	if(cnt >= 2)
+		printf("OUCH\n");
 	return 0;
 }
 
