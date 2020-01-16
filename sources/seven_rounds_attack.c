@@ -47,11 +47,9 @@ Bool	seven_rounds_attack(u_klein masterKey)
 
 static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
-	u_klein		m1, m2, c1, c2;
-	u_klein		tmp, cipherDifferential;
-	int			cnt, i;
+	u_klein		m1, m2;
+	int			cnt;
 	long long 	nbTest=0;
-	Bool		valid;
 
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
@@ -68,9 +66,8 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 			return 0;
 		}
 
-		if(verify_good_couple_condition(m1, m2))
+		if(verify_good_couple_condition(m1, m2) && add_good_couple(goodCouples, m1, m2, cnt))
 		{
-			add_good_couple(goodCouples, m1, m2, cnt);
 			cnt++;
 			print_u_klein(m1, "Good couple found");
 		}
@@ -121,12 +118,22 @@ Bool	verify_good_couple_condition(u_klein m1, u_klein m2)
 }
 
 
-void	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt)
+Bool	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt)
 {
+	Bool	alreadyInTab;
+
+	alreadyInTab = 0;
+	for(int i = 0 ; i < GOOD_COUPLES_NB ; i++)
+			if(!u_klein_cmp(m1, goodCouples[i][0]) && !u_klein_cmp(m1, goodCouples[i][1]))
+				alreadyInTab = 1;
+	if(alreadyInTab)
+		return 0;
+
 	u_klein_dcp(goodCouples[cnt][0], m1);
 	u_klein_dcp(goodCouples[cnt][1], m2);
 	oracle(goodCouples[cnt][2], m1);
 	oracle(goodCouples[cnt][3], m2);
+	return 1;
 }
 
 

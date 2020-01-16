@@ -92,7 +92,7 @@ void	oracle(u_klein cipher, u_klein const plain);
 
 Bool		seven_rounds_attack(u_klein masterKey);
 Bool		verify_good_couple_condition(u_klein m1, u_klein m2);
-void		add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt);
+Bool		add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt);
 void		init_d(u_klein d);
 void		halfkey(u_klein kTilde, long long k);
 Bool 		verify_kTilde(u_klein const kTilde, u_klein const goodCouples[4]);
@@ -105,9 +105,6 @@ void 		fill_test_key(u_klein testKey, long long k);
 Bool		eight_rounds_attack(u_klein masterKey);
 Bool		verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4]);
 void		neutral_byte_modification(u_klein rop, long long k);
-
-
-
 
 
 // prng_knuth_lewis.c

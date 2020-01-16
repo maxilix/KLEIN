@@ -49,8 +49,7 @@ Bool		eight_rounds_attack(u_klein masterKey)
 static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
 	u_klein			m1, m2;
-	int				cnt, i, index;
-	unsigned long	rd;
+	int				cnt;
 	long long 		compteurTEST=0;
 
 	if(extract_couples_from_file(goodCouples, d))		
@@ -61,21 +60,12 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 	{
 
 		compteurTEST++;
-		if(!(compteurTEST%10000000))
+		if(!(compteurTEST%100000000))
 			printf("nombre de test : %lld\n",compteurTEST);
 
+		random_u_klein(m1);
+		u_klein_xor(m2, m1, d);
 
-		for(int j = 0 ; j < 2 ; j++)
-		{
-			rd = (unsigned long)rand();
-			for(i = 0 ; i < NIBBLES_NB_DIV2 ; i++)
-			{
-				index = i + j * NIBBLES_NB_DIV2;
-				m1[index] = rd % 16;
-				rd /= 16;
-				m2[index] = m1[index] ^ d[index];
-			}
-		}
 		if(verify_good_couple_condition(m1, m2))
 		{
 			print_u_klein(m1,"Un couple candidat trouvé, m1 = ");
@@ -127,7 +117,7 @@ Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
 		compteurTEST++;
-		if(!(compteurTEST%10000000))
+		if(!(compteurTEST%100000000))
 			printf("\tnombre de test : %lld\n",compteurTEST);
 
 		if(k == MAX_LONG_DIV2 && cnt == 0)
@@ -142,10 +132,9 @@ Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 		}
 		neutral_byte_modification(m1, k);
 		u_klein_xor(m2, m1, d);
-		if(verify_good_couple_condition(m1, m2))
+		if(verify_good_couple_condition(m1, m2) && add_good_couple(goodCouples, m1, m2, index + cnt))
 		{
 			print_u_klein(m1,"\t Un nouveau : ");
-			add_good_couple(goodCouples, m1, m2, index + cnt);
 			cnt++;
 		}
 	}
