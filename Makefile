@@ -11,7 +11,8 @@ SRCS = 	sources/display.c 				\
 		sources/utils.c					\
 		sources/seven_rounds_attack.c	\
 		sources/eight_rounds_attack.c	\
-		sources/prng_knuth_lewis.c
+		sources/prng_knuth_lewis.c		\
+		sources/cheating.c
 
 
 all :

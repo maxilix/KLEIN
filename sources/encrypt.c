@@ -140,6 +140,14 @@ unsigned char 	mul14(unsigned char const op)
 }
 
 
+void	encrypt_round(u_klein cipher, u_klein const roundKey)
+{
+	add_round_key(cipher , cipher , key[i]);
+	sub_nibbles(cipher , cipher);
+	rotate_nibbles(cipher , cipher);
+	mix_nibbles(cipher , cipher);
+}
+
 
 void	encrypt(u_klein cipher , u_klein const plain , Key const key)
 {

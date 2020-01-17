@@ -1,0 +1,675 @@
+cirthy@cirthy-MS-7978:~/Documents/Unilim/S9/DLC/KLEIN$ ./klein 
+Je rentre dans eight_rounds_attack !
+C'est parti pour la recherche des couples !
+nombre de test : 100000000
+nombre de test : 200000000
+nombre de test : 300000000
+nombre de test : 400000000
+nombre de test : 500000000
+nombre de test : 600000000
+nombre de test : 700000000
+nombre de test : 800000000
+nombre de test : 900000000
+nombre de test : 1000000000
+nombre de test : 1100000000
+nombre de test : 1200000000
+nombre de test : 1300000000
+nombre de test : 1400000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 1500000000
+nombre de test : 1600000000
+nombre de test : 1700000000
+nombre de test : 1800000000
+nombre de test : 1900000000
+nombre de test : 2000000000
+nombre de test : 2100000000
+nombre de test : 2200000000
+nombre de test : 2300000000
+nombre de test : 2400000000
+nombre de test : 2500000000
+nombre de test : 2600000000
+nombre de test : 2700000000
+nombre de test : 2800000000
+nombre de test : 2900000000
+nombre de test : 3000000000
+nombre de test : 3100000000
+nombre de test : 3200000000
+nombre de test : 3300000000
+nombre de test : 3400000000
+nombre de test : 3500000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 3600000000
+nombre de test : 3700000000
+nombre de test : 3800000000
+nombre de test : 3900000000
+nombre de test : 4000000000
+nombre de test : 4100000000
+nombre de test : 4200000000
+nombre de test : 4300000000
+nombre de test : 4400000000
+nombre de test : 4500000000
+nombre de test : 4600000000
+nombre de test : 4700000000
+nombre de test : 4800000000
+nombre de test : 4900000000
+nombre de test : 5000000000
+nombre de test : 5100000000
+nombre de test : 5200000000
+nombre de test : 5300000000
+nombre de test : 5400000000
+nombre de test : 5500000000
+nombre de test : 5600000000
+nombre de test : 5700000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 5800000000
+nombre de test : 5900000000
+nombre de test : 6000000000
+nombre de test : 6100000000
+nombre de test : 6200000000
+nombre de test : 6300000000
+nombre de test : 6400000000
+nombre de test : 6500000000
+nombre de test : 6600000000
+nombre de test : 6700000000
+nombre de test : 6800000000
+nombre de test : 6900000000
+nombre de test : 7000000000
+nombre de test : 7100000000
+nombre de test : 7200000000
+nombre de test : 7300000000
+nombre de test : 7400000000
+nombre de test : 7500000000
+nombre de test : 7600000000
+nombre de test : 7700000000
+nombre de test : 7800000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+
+
+cirthy@cirthy-MS-7978:~/Documents/Unilim/S9/DLC/KLEIN$ ./klein 
+Je rentre dans eight_rounds_attack !
+C'est parti pour la recherche des couples !
+nombre de test : 100000000
+nombre de test : 200000000
+nombre de test : 300000000
+nombre de test : 400000000
+nombre de test : 500000000
+nombre de test : 600000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 700000000
+nombre de test : 800000000
+nombre de test : 900000000
+nombre de test : 1000000000
+nombre de test : 1100000000
+nombre de test : 1200000000
+nombre de test : 1300000000
+nombre de test : 1400000000
+nombre de test : 1500000000
+nombre de test : 1600000000
+nombre de test : 1700000000
+nombre de test : 1800000000
+nombre de test : 1900000000
+nombre de test : 2000000000
+nombre de test : 2100000000
+nombre de test : 2200000000
+nombre de test : 2300000000
+nombre de test : 2400000000
+nombre de test : 2500000000
+nombre de test : 2600000000
+nombre de test : 2700000000
+nombre de test : 2800000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 2900000000
+nombre de test : 3000000000
+nombre de test : 3100000000
+nombre de test : 3200000000
+nombre de test : 3300000000
+nombre de test : 3400000000
+nombre de test : 3500000000
+nombre de test : 3600000000
+nombre de test : 3700000000
+nombre de test : 3800000000
+nombre de test : 3900000000
+nombre de test : 4000000000
+nombre de test : 4100000000
+nombre de test : 4200000000
+nombre de test : 4300000000
+nombre de test : 4400000000
+nombre de test : 4500000000
+nombre de test : 4600000000
+nombre de test : 4700000000
+nombre de test : 4800000000
+nombre de test : 4900000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 5000000000
+nombre de test : 5100000000
+nombre de test : 5200000000
+nombre de test : 5300000000
+nombre de test : 5400000000
+nombre de test : 5500000000
+nombre de test : 5600000000
+nombre de test : 5700000000
+nombre de test : 5800000000
+nombre de test : 5900000000
+nombre de test : 6000000000
+nombre de test : 6100000000
+nombre de test : 6200000000
+nombre de test : 6300000000
+nombre de test : 6400000000
+nombre de test : 6500000000
+nombre de test : 6600000000
+nombre de test : 6700000000
+nombre de test : 6800000000
+nombre de test : 6900000000
+nombre de test : 7000000000
+nombre de test : 7100000000
+Un couple candidat trouvé, m1 =  :	CB 0F 5C 87 48 41 32 90
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	C0 0F 5C 87 48 41 32 90
+	 Un nouveau :  :	CB 0F 5C 87 48 41 32 90
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+
+
+cirthy@cirthy-MS-7978:~/Documents/Unilim/S9/DLC/KLEIN$ ./klein 
+Je rentre dans eight_rounds_attack !
+C'est parti pour la recherche des couples !
+nombre de test : 100000000
+nombre de test : 200000000
+nombre de test : 300000000
+nombre de test : 400000000
+nombre de test : 500000000
+nombre de test : 600000000
+nombre de test : 700000000
+nombre de test : 800000000
+nombre de test : 900000000
+nombre de test : 1000000000
+nombre de test : 1100000000
+Un couple candidat trouvé, m1 =  :	7A 69 DB 31 4C 8A E8 75
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	 Un nouveau :  :	71 69 DB 31 4C 8A E8 75
+	 Un nouveau :  :	7A 69 DB 31 4C 8A E8 75
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+^[[6~^[	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 1200000000
+nombre de test : 1300000000
+nombre de test : 1400000000
+nombre de test : 1500000000
+nombre de test : 1600000000
+nombre de test : 1700000000
+nombre de test : 1800000000
+nombre de test : 1900000000
+nombre de test : 2000000000
+Un couple candidat trouvé, m1 =  :	50 9F 9D D5 59 29 F5 56
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	67 4C 9D D5 59 29 27 A0
+	 Un nouveau :  :	6C 4C 9D D5 59 29 27 A0
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	 Un nouveau :  :	50 9F 9D D5 59 29 F5 56
+	 Un nouveau :  :	5B 9F 9D D5 59 29 F5 56
+	Arret car cnt = 4
+	Wahou ! On en a chopé 4 :3
+nombre de test : 2100000000
+nombre de test : 2200000000
+nombre de test : 2300000000
+nombre de test : 2400000000
+nombre de test : 2500000000
+nombre de test : 2600000000
+nombre de test : 2700000000
+nombre de test : 2800000000
+nombre de test : 2900000000
+nombre de test : 3000000000
+nombre de test : 3100000000
+nombre de test : 3200000000
+Un couple candidat trouvé, m1 =  :	7A 69 DB 31 4C 8A E8 75
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	 Un nouveau :  :	71 69 DB 31 4C 8A E8 75
+	 Un nouveau :  :	7A 69 DB 31 4C 8A E8 75
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	nombre de test : 1800000000
+	nombre de test : 1900000000
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	nombre de test : 2300000000
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	nombre de test : 3000000000
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+nombre de test : 3300000000
+nombre de test : 3400000000
+nombre de test : 3500000000
+nombre de test : 3600000000
+nombre de test : 3700000000
+nombre de test : 3800000000
+nombre de test : 3900000000
+nombre de test : 4000000000
+nombre de test : 4100000000
+Un couple candidat trouvé, m1 =  :	50 9F 9D D5 59 29 F5 56
+	Entrée dans verify_good_couple
+	nombre de test : 100000000
+	 Un nouveau :  :	67 4C 9D D5 59 29 27 A0
+	 Un nouveau :  :	6C 4C 9D D5 59 29 27 A0
+	nombre de test : 200000000
+	nombre de test : 300000000
+	nombre de test : 400000000
+	nombre de test : 500000000
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	nombre de test : 900000000
+	nombre de test : 1000000000
+	nombre de test : 1100000000
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	 Un nouveau :  :	50 9F 9D D5 59 29 F5 56
+	 Un nouveau :  :	5B 9F 9D D5 59 29 F5 56
+	Arret car cnt = 4
+	Wahou ! On en a chopé 4 :3
+Good k_tilde found :	00 00 03 0A 00 00 01 08
+Unsuccessful
+Good k_tilde found :	00 00 03 0A 00 00 08 01
+Unsuccessful
+Good k_tilde found :	00 00 03 0A 00 01 04 0E
