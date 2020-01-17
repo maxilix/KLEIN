@@ -3,12 +3,14 @@
 
 Bool	verify_good_couple_condition_cheating(u_klein const m1, u_klein const m2)
 {
-	static Key		keys = NULL;
+	static Key		keys;
 	static u_klein	master_key;
+	static Bool		firstCall = 1;
 	u_klein			c1, c2, cipherDifferential;
 
-	if(!keys)
+	if(firstCall)
 	{
+		firstCall = 0;
 		str2u_klein(master_key, MASTER_KEY);
 		key_schedule(keys, master_key);
 	}

@@ -19,7 +19,7 @@ all :
 	$(CC) $(CFLAGS) sources/main.c $(SRCS) -o $(NAME)
 
 test :
-	$(CC) $(CFLAGS) sources/testmain.c $(SRCS) -o $(NAME)
+	$(CC) sources/testmain.c $(SRCS) -o $(NAME)
 
 Wless :
 	$(CC) sources/main.c $(SRCS) -o $(NAME)
