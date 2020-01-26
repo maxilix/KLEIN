@@ -50,7 +50,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 {
 	u_klein			m1, m2;
 	int				cnt;
-	long long 		compteurTEST=0;
+	long long 		compteurTEST = 0;
 
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
@@ -109,7 +109,7 @@ Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 	int			cnt;
 	u_klein		m1, m2;
 	u_klein		d;
-	long long 	compteurTEST=0;
+	long long 	compteurTEST = 0;
 
 	init_d(d);
 	u_klein_dcp(m1, goodCouples[index][0]);
