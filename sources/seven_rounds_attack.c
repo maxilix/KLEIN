@@ -120,14 +120,9 @@ Bool	verify_good_couple_condition(u_klein m1, u_klein m2)
 
 Bool	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klein m2, int cnt)
 {
-	Bool	alreadyInTab;
-
-	alreadyInTab = 0;
 	for(int i = 0 ; i < GOOD_COUPLES_NB ; i++)
-			if(!u_klein_cmp(m1, goodCouples[i][0]) && !u_klein_cmp(m1, goodCouples[i][1]))
-				alreadyInTab = 1;
-	if(alreadyInTab)
-		return 0;
+			if(!u_klein_cmp(m1, goodCouples[i][0]) || !u_klein_cmp(m1, goodCouples[i][1]))
+				return 0;
 
 	u_klein_dcp(goodCouples[cnt][0], m1);
 	u_klein_dcp(goodCouples[cnt][1], m2);

@@ -85,6 +85,7 @@ unsigned char 	mul11(unsigned char const op);
 unsigned char 	mul13(unsigned char const op);
 unsigned char 	mul14(unsigned char const op);
 
+void	encrypt_round(u_klein cipher, u_klein const roundKey);
 void	encrypt(u_klein cipher , u_klein const plain , Key const key);
 void	decrypt(u_klein deciphered , u_klein const cipher , Key const key);
 void	oracle(u_klein cipher, u_klein const plain);
@@ -114,6 +115,11 @@ void		neutral_byte_modification(u_klein rop, long long k);
 void 	genarator_init();
 void 	random_u_klein_knuthlewis(u_klein rop);
 void 	random_u_klein_haynes(u_klein rop);
+
+
+// cheating.c
+
+Bool	find_a_good_couple(u_klein rop, u_klein d);
 
 #endif
 

@@ -11,14 +11,15 @@ SRCS = 	sources/display.c 				\
 		sources/utils.c					\
 		sources/seven_rounds_attack.c	\
 		sources/eight_rounds_attack.c	\
-		sources/prng_knuth_lewis.c
+		sources/prng_knuth_lewis.c		\
+		sources/cheating.c
 
 
 all :
 	$(CC) $(CFLAGS) sources/main.c $(SRCS) -o $(NAME)
 
 test :
-	$(CC) $(CFLAGS) sources/testmain.c $(SRCS) -o $(NAME)
+	$(CC) sources/testmain.c $(SRCS) -o $(NAME)
 
 Wless :
 	$(CC) sources/main.c $(SRCS) -o $(NAME)
