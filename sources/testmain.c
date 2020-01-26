@@ -6,22 +6,24 @@ const unsigned char 	Sbox[16] = {0x7, 0x4, 0xa, 0x9, 0x1, 0xf, 0xb, 0x0, 0xc, 0x
 
 int main()
 {
-	u_klein	master_key;
+	u_klein 			rd;
+	unsigned long long 	t, pow;
+	genarator_init();
 
-	srand(time(NULL));
-	switch(ROUNDS_NB)
+	for (int i = 0 ; i < 10000 ; i++)
 	{
-		case 7 :
-			seven_rounds_attack(master_key);
-			break;
-		case 8 :
-			eight_rounds_attack(master_key);
-			break;
-		case 12 :
-			printf("HA HA ...\n");
-			break;
+		t = 0;
+		pow = 1;
+		random_u_klein_haynes(rd);
+		for(int i = 0 ; i < NIBBLES_NB ; i++)
+		{	
+			t+=rd[i]*pow;
+			pow*=16;
+		}
+		printf("%llu\n",t);
+
 	}
 
-	print_u_klein(master_key, "YAY ! The master key is");
 	return 0;
+
 }

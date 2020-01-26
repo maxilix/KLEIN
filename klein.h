@@ -21,6 +21,8 @@
 #define 	KNUTH_LEWIS_GENERATOR_A 	1664525
 #define 	KNUTH_LEWIS_GENERATOR_C 	1013904223
 #define 	KNUTH_LEWIS_GENERATOR_M 	4294967296
+#define 	HAYNES_GENERATOR_A 			6364136223846793005
+#define 	HAYNES_GENERATOR_M 			18446744073709551616
 
 
 extern const unsigned char 	Sbox[16];
@@ -109,8 +111,9 @@ void		neutral_byte_modification(u_klein rop, long long k);
 
 // prng_knuth_lewis.c
 
-void 			random_u_klein(u_klein rop);
-unsigned long 	random_kl();
+void 	genarator_init();
+void 	random_u_klein_knuthlewis(u_klein rop);
+void 	random_u_klein_haynes(u_klein rop);
 
 #endif
 
