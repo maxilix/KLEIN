@@ -63,7 +63,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 		if(!(compteurTEST%100000000))
 			printf("nombre de test : %lld\n",compteurTEST);
 
-		random_u_klein(m1);
+		random_u_klein_haynes(m1);
 		u_klein_xor(m2, m1, d);
 
 		if(verify_good_couple_condition(m1, m2))
