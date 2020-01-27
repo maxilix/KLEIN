@@ -6,24 +6,17 @@ const unsigned char 	Sbox[16] = {0x7, 0x4, 0xa, 0x9, 0x1, 0xf, 0xb, 0x0, 0xc, 0x
 
 int main()
 {
-	u_klein 			rd;
-	unsigned long long 	t, pow;
-	genarator_init();
+	u_klein	test;
+/*	u_klein	masterKey;
+	u_klein	d;
+	Key		keys;*/
 
-	for (int i = 0 ; i < 10000 ; i++)
-	{
-		t = 0;
-		pow = 1;
-		random_u_klein_haynes(rd);
-		for(int i = 0 ; i < NIBBLES_NB ; i++)
-		{	
-			t+=rd[i]*pow;
-			pow*=16;
-		}
-		printf("%llu\n",t);
+	str2u_klein(test, "0x1CC22DA116618507");
+	print_u_klein(test, "test");
+	/*str2u_klein(masterKey, MASTER_KEY)
+	key_schedule(keys, masterKey);*/
 
-	}
-
+	display_cipher_differential(test);
 	return 0;
 
 }

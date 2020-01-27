@@ -23,7 +23,7 @@ Bool	verify_good_couple_condition_cheating(u_klein const m1, u_klein const m2)
 		encrypt_round(c2, keys[i]);
 		u_klein_xor(cipherDifferential, c1, c2);
 		for(int j = 0 ; j < NIBBLES_NB_DIV2 ; j++) 
-			if(cipherDifferential[2 * i])
+			if(cipherDifferential[2 * j])
 				return 0;
 	}
 	return 1;

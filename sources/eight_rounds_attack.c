@@ -120,9 +120,9 @@ Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 		if(!(compteurTEST%100000000))
 			printf("\tnombre de test : %lld\n",compteurTEST);
 
-		if(k == MAX_LONG_DIV2 && cnt == 0)
+		if(k == MAX_LONG_DIV2 && cnt <= 1)
 		{
-			printf("\tArret car k grand et cnt = 0\n");
+			printf("\tArret car k grand et cnt <= 1\n");
 			break;
 		}
 		if (cnt == 4)
@@ -144,8 +144,6 @@ Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 		index += 4;
 		return 1;
 	}
-	if(cnt >= 3)
-		printf("\tOUCH\n");
 	return 0;
 }
 
