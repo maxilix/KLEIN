@@ -113,7 +113,7 @@ void		neutral_byte_modification(u_klein rop, long long k);
 
 // prng_knuth_lewis.c
 
-void 	genarator_init();
+void 	init_generators();
 void 	random_u_klein_knuthlewis(u_klein rop);
 void 	random_u_klein_haynes(u_klein rop);
 

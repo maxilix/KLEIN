@@ -10,7 +10,10 @@ Bool	seven_rounds_attack(u_klein masterKey)
 	u_klein		kTilde;
 	int			cntError, i;
 
+	printf("start seven round attack\n");
+
 	init_d(d);
+
 
 	if(!find_good_couples(goodCouples, d))
 		return 0;
@@ -53,7 +56,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
 
-	printf("searching for couples\n")
+	printf("searching for couples\n");
 
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
@@ -62,15 +65,14 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 		u_klein_xor(m2, m1, d);
 
 		if (!(nbTest%10000000))
-		{
-			printf("test number : %lld\n", nbTest);
-			return 0;
-		}
+			printf("\ttest number : %lld\n", nbTest);
+		nbTest++;
+
 
 		if(verify_good_couple_condition(m1, m2) && add_good_couple(goodCouples, m1, m2, cnt))
 		{
 			cnt++;
-			print_u_klein(m1, "Good couple found");
+			print_u_klein(m1, "\tGood couple found");
 		}
 	}
 	return 1;
@@ -138,6 +140,7 @@ void	init_d(u_klein d)
 	for(int i = 0 ; i < NIBBLES_NB ; i++)
 		d[i] = 0;
 	d[5] = 0xb;
+	print_u_klein(d,"differential initialization");
 }
 
 
