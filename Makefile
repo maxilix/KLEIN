@@ -12,7 +12,8 @@ SRCS = 	sources/display.c 				\
 		sources/seven_rounds_attack.c	\
 		sources/eight_rounds_attack.c	\
 		sources/prng.c					\
-		sources/cheating.c
+		sources/cheating.c 				\
+		sources/tables.c
 
 
 all :

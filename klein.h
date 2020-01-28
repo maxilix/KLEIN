@@ -27,6 +27,13 @@
 
 
 extern const unsigned char 	Sbox[16];
+extern const unsigned char 	mul2table[256];
+extern const unsigned char 	mul3table[256];
+extern const unsigned char 	mul9table[256];
+extern const unsigned char 	mul11table[256];
+extern const unsigned char 	mul13table[256];
+extern const unsigned char 	mul14table[256];
+
 
 
 typedef char			Bool;

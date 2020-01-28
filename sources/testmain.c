@@ -1,7 +1,6 @@
 #include	"../klein.h"
 
 
-const unsigned char 	Sbox[16] = {0x7, 0x4, 0xa, 0x9, 0x1, 0xf, 0xb, 0x0, 0xc, 0x3, 0x2, 0x6, 0x8, 0xe, 0xd, 0x5};
 
 
 /*
@@ -102,3 +101,38 @@ int main()
 }
 
 */
+
+
+int main(int argc, char const *argv[])
+{
+	u_klein				m1,m2;
+
+	str2u_klein(m1, "0x8E4DA1BC9FDC589D");
+	unmix_nibbles(m2,m1);
+	print_u_klein(m2,"");
+
+
+
+	return 0;
+	// time 24.251
+}
+
+/*
+int main(int argc, char const *argv[])
+{
+	printf("const unsigned char \tmul14table[256] = {");
+
+	for(int i = 0 ; i < 256 ; i++)
+	{
+		printf("0x%2x, ",mul14(i));
+		if (i==255)
+		{
+			printf("\b\b};\n");
+			return 0;
+		}
+		if (i%16==15)
+			printf("\n\t\t\t\t\t\t\t\t\t\t   ");
+	}
+
+	return 0;
+}*/

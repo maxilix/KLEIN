@@ -54,15 +54,15 @@ void 	mix_nibbles(u_klein rop , u_klein const op)
 		opRight[i] = 16*op[2*i+NIBBLES_NB_DIV2] + op[2*i+1+NIBBLES_NB_DIV2];
 	}
 
-	ropLeft[0] = mul2(opLeft[0]) ^ mul3(opLeft[1]) ^      opLeft[2]  ^      opLeft[3] ;
-	ropLeft[1] =      opLeft[0]  ^ mul2(opLeft[1]) ^ mul3(opLeft[2]) ^      opLeft[3] ;
-	ropLeft[2] =      opLeft[0]  ^      opLeft[1]  ^ mul2(opLeft[2]) ^ mul3(opLeft[3]);
-	ropLeft[3] = mul3(opLeft[0]) ^      opLeft[1]  ^      opLeft[2]  ^ mul2(opLeft[3]);
+	ropLeft[0] = mul2table[opLeft[0]] ^ mul3table[opLeft[1]] ^           opLeft[2]  ^           opLeft[3] ;
+	ropLeft[1] =           opLeft[0]  ^ mul2table[opLeft[1]] ^ mul3table[opLeft[2]] ^           opLeft[3] ;
+	ropLeft[2] =           opLeft[0]  ^           opLeft[1]  ^ mul2table[opLeft[2]] ^ mul3table[opLeft[3]];
+	ropLeft[3] = mul3table[opLeft[0]] ^           opLeft[1]  ^           opLeft[2]  ^ mul2table[opLeft[3]];
 
-	ropRight[0] = mul2(opRight[0]) ^ mul3(opRight[1]) ^      opRight[2]  ^      opRight[3] ;
-	ropRight[1] =      opRight[0]  ^ mul2(opRight[1]) ^ mul3(opRight[2]) ^      opRight[3] ;
-	ropRight[2] =      opRight[0]  ^      opRight[1]  ^ mul2(opRight[2]) ^ mul3(opRight[3]);
-	ropRight[3] = mul3(opRight[0]) ^      opRight[1]  ^      opRight[2]  ^ mul2(opRight[3]);
+	ropRight[0] = mul2table[opRight[0]] ^ mul3table[opRight[1]] ^           opRight[2]  ^           opRight[3] ;
+	ropRight[1] =           opRight[0]  ^ mul2table[opRight[1]] ^ mul3table[opRight[2]] ^           opRight[3] ;
+	ropRight[2] =           opRight[0]  ^           opRight[1]  ^ mul2table[opRight[2]] ^ mul3table[opRight[3]];
+	ropRight[3] = mul3table[opRight[0]] ^           opRight[1]  ^           opRight[2]  ^ mul2table[opRight[3]];
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV4 ; i++)
 	{
@@ -86,15 +86,15 @@ void 	unmix_nibbles(u_klein rop , u_klein const op)
 		opRight[i] = 16*op[2*i+NIBBLES_NB/2] + op[2*i+1+NIBBLES_NB/2];
 	}
 
-	ropLeft[0] = mul14(opLeft[0]) ^ mul11(opLeft[1]) ^ mul13(opLeft[2]) ^  mul9(opLeft[3]);
-	ropLeft[1] =  mul9(opLeft[0]) ^ mul14(opLeft[1]) ^ mul11(opLeft[2]) ^ mul13(opLeft[3]);
-	ropLeft[2] = mul13(opLeft[0]) ^  mul9(opLeft[1]) ^ mul14(opLeft[2]) ^ mul11(opLeft[3]);
-	ropLeft[3] = mul11(opLeft[0]) ^ mul13(opLeft[1]) ^  mul9(opLeft[2]) ^ mul14(opLeft[3]);
+	ropLeft[0] = mul14table[opLeft[0]] ^ mul11table[opLeft[1]] ^ mul13table[opLeft[2]] ^  mul9table[opLeft[3]];
+	ropLeft[1] =  mul9table[opLeft[0]] ^ mul14table[opLeft[1]] ^ mul11table[opLeft[2]] ^ mul13table[opLeft[3]];
+	ropLeft[2] = mul13table[opLeft[0]] ^  mul9table[opLeft[1]] ^ mul14table[opLeft[2]] ^ mul11table[opLeft[3]];
+	ropLeft[3] = mul11table[opLeft[0]] ^ mul13table[opLeft[1]] ^  mul9table[opLeft[2]] ^ mul14table[opLeft[3]];
 
-	ropRight[0] = mul14(opRight[0]) ^ mul11(opRight[1]) ^ mul13(opRight[2]) ^  mul9(opRight[3]);
-	ropRight[1] =  mul9(opRight[0]) ^ mul14(opRight[1]) ^ mul11(opRight[2]) ^ mul13(opRight[3]);
-	ropRight[2] = mul13(opRight[0]) ^  mul9(opRight[1]) ^ mul14(opRight[2]) ^ mul11(opRight[3]);
-	ropRight[3] = mul11(opRight[0]) ^ mul13(opRight[1]) ^  mul9(opRight[2]) ^ mul14(opRight[3]);
+	ropRight[0] = mul14table[opRight[0]] ^ mul11table[opRight[1]] ^ mul13table[opRight[2]] ^  mul9table[opRight[3]];
+	ropRight[1] =  mul9table[opRight[0]] ^ mul14table[opRight[1]] ^ mul11table[opRight[2]] ^ mul13table[opRight[3]];
+	ropRight[2] = mul13table[opRight[0]] ^  mul9table[opRight[1]] ^ mul14table[opRight[2]] ^ mul11table[opRight[3]];
+	ropRight[3] = mul11table[opRight[0]] ^ mul13table[opRight[1]] ^  mul9table[opRight[2]] ^ mul14table[opRight[3]];
 
 	for(int i = 0 ; i < NIBBLES_NB_DIV4 ; i++)
 	{
