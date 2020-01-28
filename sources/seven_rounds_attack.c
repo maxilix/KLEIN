@@ -15,12 +15,12 @@ Bool	seven_rounds_attack(u_klein masterKey)
 	if(!find_good_couples(goodCouples, d))
 		return 0;
 
-	for(i = 0 ; i < GOOD_COUPLES_NB ; i++)
-	{
-		u_klein_xor(goodCouples[i][1], goodCouples[i][0], d);
-		oracle(goodCouples[i][2],goodCouples[i][0]);
-		oracle(goodCouples[i][3],goodCouples[i][1]);
-	}
+//	for(i = 0 ; i < GOOD_COUPLES_NB ; i++)
+//	{
+//		u_klein_xor(goodCouples[i][1], goodCouples[i][0], d);
+//		oracle(goodCouples[i][2],goodCouples[i][0]);
+//		oracle(goodCouples[i][3],goodCouples[i][1]);
+//	}
 		
 	str2u_klein(kTilde, "0x0000000000000000");	// Expected kTilde : 0x6EF8404546460E97
 	for(long long k = 0 ; k < MAX_LONG ; k++)	// test until 0x0A080A0E050F0800 = 2830000000‬
@@ -33,8 +33,7 @@ Bool	seven_rounds_attack(u_klein masterKey)
 				cntError++;
 		if(cntError <= ERROR_THRESHOLD)
 		{
-			printf("Good k tilde found : ");
-			display_u_klein(kTilde);
+			print_u_klein(kTilde,"Good k tilde found");
 			printf("\n");
 			if(find_full_key(masterKey, kTilde, goodCouples))
 				return 1;
@@ -53,6 +52,8 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
+
+	printf("searching for couples\n")
 
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
@@ -134,10 +135,9 @@ Bool	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klei
 
 void	init_d(u_klein d)
 {
-	d[0] = 0;
-	d[1] = 0xb;
-	for(int i = 2 ; i < NIBBLES_NB ; i++)
+	for(int i = 0 ; i < NIBBLES_NB ; i++)
 		d[i] = 0;
+	d[5] = 0xb;
 }
 
 

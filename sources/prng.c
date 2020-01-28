@@ -51,6 +51,7 @@ static unsigned long 		random_knuthlewis()
 	{
 		init = 1;
 		rd = rand();
+		printf("knuth lewis generator seed : %ld\n",rd);
 	}
 
 	rd = ( KNUTH_LEWIS_GENERATOR_A * rd + KNUTH_LEWIS_GENERATOR_C ) % KNUTH_LEWIS_GENERATOR_M;
@@ -69,6 +70,7 @@ static unsigned long long 	random_haynes()
 	{
 		init = 1;
 		rd = rand();
+		printf("hanes generator seed : %lld\n",rd);
 	}
 
 	rd = (unsigned long long)( HAYNES_GENERATOR_A * rd );

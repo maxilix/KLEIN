@@ -10,11 +10,12 @@
 #define		NIBBLES_NB				16
 #define		NIBBLES_NB_DIV2			8
 #define		NIBBLES_NB_DIV4			4
-#define		ROUNDS_NB				8
+#define		ROUNDS_NB				7
 #define		MAX_LONG				4294967296
 #define		MAX_LONG_DIV2			2147483648
+#define 	MAX_LONG_LONG 			18446744073709551616
 #define		UKLEIN_STRING_LENGTH	18
-#define		MASTER_KEY				"0x1111111111111111"
+#define		MASTER_KEY				"0x0123456789ABCDEF"
 #define		GOOD_COUPLES_NB			8  
 #define		ERROR_THRESHOLD			2
 
@@ -119,7 +120,7 @@ void 	random_u_klein_haynes(u_klein rop);
 
 // cheating.c
 
-Bool	find_a_good_couple(u_klein rop, u_klein d);
+Bool	verify_good_couple_condition_cheating(u_klein const m1, u_klein const m2);
 
 #endif
 

@@ -17,7 +17,7 @@ Bool	verify_good_couple_condition_cheating(u_klein const m1, u_klein const m2)
 
 	u_klein_dcp(c1, m1);
 	u_klein_dcp(c2, m2);
-	for(int i = 0 ; i < ROUNDS_NB ; i++)
+	for(int i = 0 ; i < ROUNDS_NB-1 ; i++)
 	{
 		encrypt_round(c1, keys[i]);
 		encrypt_round(c2, keys[i]);
