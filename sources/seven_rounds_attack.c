@@ -26,7 +26,7 @@ Bool	seven_rounds_attack(u_klein masterKey)
 
 		if ((k!=0) && !(k%100000000))
 		{
-			printf("\ttest number : %lld current u_klein : ", k);
+			printf("\ttest number : %lld\t current u_klein : ", k);
 			display_u_klein(kTilde);
 			printf("\n");
 		}
@@ -68,7 +68,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 		nbTest++;
 		if (!(nbTest%100000000))
 		{
-			printf("\ttest number : %lld current u_klein : ", nbTest);
+			printf("\ttest number : %lld\t current u_klein : ", nbTest);
 			display_u_klein(m1);
 			printf("\n");
 		}
@@ -205,7 +205,7 @@ Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples
 
 		if ((k!=0) && !(k%100000000))
 		{
-			printf("\ttest number : %lld current u_klein : ", k);
+			printf("\ttest number : %lld\t current u_klein : ", k);
 			display_u_klein(testKey);
 			printf("\n");
 		}

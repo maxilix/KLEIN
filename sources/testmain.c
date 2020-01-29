@@ -47,25 +47,26 @@ int main(int argc, char const *argv[])
 
 int main(int argc, char const *argv[])
 {
-	/*init_generators();
+	init_generators();
 	u_klein	test;
 
-	for(int i = 0 ; i<30 ; i++)
+	for(int i = 0 ; i<1000000 ; i++)
 	{
-		random_u_klein_rand(test);
-		print_u_klein(test ,"");
-	}*/
+		random_u_klein_haynes(test);
+		display_u_klein(test);
+		printf("\n");
+	}
 	//u_klein	masterKey;
 	//u_klein	d;
 	//Key		keys;
-	u_klein	test;
+	//u_klein	test;
 
-	str2u_klein(test, argv[1]);
+	//str2u_klein(test, argv[1]);
 	//print_u_klein(test, "test");
 	//str2u_klein(masterKey, MASTER_KEY)
 	//key_schedule(keys, masterKey);
 
-	display_cipher_differential(test);
+	//display_cipher_differential(test);
 	return 0;
 
 }
