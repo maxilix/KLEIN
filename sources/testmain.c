@@ -44,15 +44,23 @@ int main(int argc, char const *argv[])
 }
 */
 
-/*
-int main()
+
+int main(int argc, char const *argv[])
 {
+	/*init_generators();
 	u_klein	test;
+
+	for(int i = 0 ; i<30 ; i++)
+	{
+		random_u_klein_rand(test);
+		print_u_klein(test ,"");
+	}*/
 	//u_klein	masterKey;
 	//u_klein	d;
 	//Key		keys;
+	u_klein	test;
 
-	str2u_klein(test, "0x5AC6B805049F747A");
+	str2u_klein(test, argv[1]);
 	//print_u_klein(test, "test");
 	//str2u_klein(masterKey, MASTER_KEY)
 	//key_schedule(keys, masterKey);
@@ -60,7 +68,7 @@ int main()
 	display_cipher_differential(test);
 	return 0;
 
-}*/
+}
 
 
 
@@ -102,7 +110,7 @@ int main()
 
 */
 
-
+/*
 int main(int argc, char const *argv[])
 {
 	u_klein				m1,m2;
@@ -115,7 +123,7 @@ int main(int argc, char const *argv[])
 
 	return 0;
 	// time 24.251
-}
+}*/
 
 /*
 int main(int argc, char const *argv[])

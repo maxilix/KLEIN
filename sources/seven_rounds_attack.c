@@ -18,17 +18,18 @@ Bool	seven_rounds_attack(u_klein masterKey)
 	if(!find_good_couples(goodCouples, d))
 		return 0;
 
-//	for(i = 0 ; i < GOOD_COUPLES_NB ; i++)
-//	{
-//		u_klein_xor(goodCouples[i][1], goodCouples[i][0], d);
-//		oracle(goodCouples[i][2],goodCouples[i][0]);
-//		oracle(goodCouples[i][3],goodCouples[i][1]);
-//	}
-		
-	str2u_klein(kTilde, "0x0000000000000000");	// Expected kTilde : 0x6EF8404546460E97
-	for(long long k = 0 ; k < MAX_LONG ; k++)	// test until 0x0A080A0E050F0800 = 2830000000‬
+	printf("start kTilde search\n");
+	str2u_klein(kTilde, "0x0000000000000000");
+	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
 		halfkey(kTilde, k);
+
+		if ((k!=0) && !(k%100000000))
+		{
+			printf("\ttest number : %lld current u_klein : ", k);
+			display_u_klein(kTilde);
+			printf("\n");
+		}
 
 		cntError = 0; i = -1;
 		while(cntError <= ERROR_THRESHOLD && ++i < GOOD_COUPLES_NB)
@@ -61,12 +62,16 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
 	{
-		random_u_klein_haynes(m1);
+		random_u_klein_rand(m1);
 		u_klein_xor(m2, m1, d);
 
-		if (!(nbTest%10000000))
-			printf("\ttest number : %lld\n", nbTest);
 		nbTest++;
+		if (!(nbTest%100000000))
+		{
+			printf("\ttest number : %lld current u_klein : ", nbTest);
+			display_u_klein(m1);
+			printf("\n");
+		}
 
 
 		if(verify_good_couple_condition(m1, m2) && add_good_couple(goodCouples, m1, m2, cnt))
@@ -188,11 +193,23 @@ Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples
 	Key 		keys;
 	Bool 		validKey;
 
+	printf("start full key search\n");
+
 	rotate_nibbles(testKeyInitValue, kTilde);
 	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
+
+
 		u_klein_dcp(testKey, testKeyInitValue);
 		fill_test_key(testKey, k);
+
+		if ((k!=0) && !(k%100000000))
+		{
+			printf("\ttest number : %lld current u_klein : ", k);
+			display_u_klein(testKey);
+			printf("\n");
+		}
+
 		mix_nibbles(testKey, testKey);
 		full_reverse_key_schedule(keys, testKey);
 

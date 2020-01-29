@@ -15,7 +15,7 @@
 #define		MAX_LONG_DIV2			2147483648
 #define 	MAX_LONG_LONG 			18446744073709551616
 #define		UKLEIN_STRING_LENGTH	18
-#define		MASTER_KEY				"0x0123456789ABCDEF"
+#define		MASTER_KEY				"0xC27316E5370BAC11"
 #define		GOOD_COUPLES_NB			8  
 #define		ERROR_THRESHOLD			2
 
@@ -23,6 +23,7 @@
 #define 	KNUTH_LEWIS_GENERATOR_C 	1013904223
 #define 	KNUTH_LEWIS_GENERATOR_M 	4294967296
 #define 	HAYNES_GENERATOR_A 			6364136223846793005
+#define 	HAYNES_GENERATOR_C 			1
 #define 	HAYNES_GENERATOR_M 			18446744073709551616
 
 
@@ -121,6 +122,7 @@ void		neutral_byte_modification(u_klein rop, long long k);
 // prng_knuth_lewis.c
 
 void 	init_generators();
+void 	random_u_klein_rand(u_klein rop);
 void 	random_u_klein_knuthlewis(u_klein rop);
 void 	random_u_klein_haynes(u_klein rop);
 

@@ -7,9 +7,27 @@ void 	init_generators()
 {
 	srand(time(NULL));
 
-	random_knuthlewis();
-	random_haynes();
+	//random_knuthlewis();
+	//random_haynes();
 }
+
+
+void 	random_u_klein_rand(u_klein rop)
+{
+	long 			rd;
+	int 			i,j;
+
+	for(i=0 ; i<4 ; i++)
+	{
+		rd = rand();
+		for(j=0 ; j<NIBBLES_NB_DIV4 ; j++)
+		{
+			rop[4*j+i] = rd % 16;
+			rd /= 16;
+		}
+	}
+}
+
 
 void 	random_u_klein_knuthlewis(u_klein rop)
 {
@@ -70,10 +88,10 @@ static unsigned long long 	random_haynes()
 	{
 		init = 1;
 		rd = rand();
-		printf("haynes generator seed : %lld\n",rd);
+		printf("haynes generator seed :      %lld\n",rd);
 	}
 
-	rd = (unsigned long long)( HAYNES_GENERATOR_A * rd );
+	rd = (unsigned long long)( HAYNES_GENERATOR_A * rd + HAYNES_GENERATOR_C);
 
 	return rd;
 }
