@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
 }
 */
 
-
+/*
 int main(int argc, char const *argv[])
 {
 	init_generators();
@@ -70,46 +70,33 @@ int main(int argc, char const *argv[])
 	return 0;
 
 }
+*/
 
 
 
-
-/*
 int main()
 {
 	u_klein				m1,m2,d;
-	//long long 			cnt = 0;
-	unsigned long long 	uk, dcpuk;
-	Bool 				found = 0;
+	unsigned long long 	uk;
 
 	init_d(d);
-	genarator_init();
+	init_generators();
 
 
 	uk = 0;
-	while(!found)
+	while(1)
 	{
 		uk++;
 		if (!(uk%100000000))
 			printf("test number : %lld\n", uk);
-		//dcpuk = uk;
-		//for(int j=0 ; j<NIBBLES_NB ; j++)
-		//{
-		//	m1[j] = dcpuk % 16;
-		//	dcpuk /= 16;
-		//}
-		random_u_klein_haynes(m1);
+		random_u_klein_rand(m1);
 		u_klein_xor(m2,m1,d);
 		if (verify_good_couple_condition_cheating(m1,m2))
-		{
 			print_u_klein(m1, "\tone found");
-			found = 1;
-		}
 	}
 	
 }
 
-*/
 
 /*
 int main(int argc, char const *argv[])
