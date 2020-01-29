@@ -62,7 +62,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
 	{
-		random_u_klein_rand(m1);
+		random_u_klein_haynes(m1);
 		u_klein_xor(m2, m1, d);
 
 		nbTest++;

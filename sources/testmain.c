@@ -3,7 +3,7 @@
 
 
 
-/*
+
 int main(int argc, char const *argv[])
 {
 	int			cnt;
@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
 	long long 	compteurTEST = 0;
 
 	init_d(d);
-	str2u_klein(m1, "0x5AC6B805049F747A");
+	str2u_klein(m1, "0x9D27FE88BE65BBA9");
 	cnt = 0;
 	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
@@ -42,37 +42,37 @@ int main(int argc, char const *argv[])
 		printf("\tWahou ! On en a chopé 4 :3\n");
 	return 0;
 }
-*/
+
 
 /*
 int main(int argc, char const *argv[])
 {
-	init_generators();
+	//init_generators();
 	u_klein	test;
 
-	for(int i = 0 ; i<1000000 ; i++)
-	{
-		random_u_klein_haynes(test);
-		display_u_klein(test);
-		printf("\n");
-	}
+	//for(int i = 0 ; i<1000000 ; i++)
+	//{
+	//	random_u_klein_haynes(test);
+	//	display_u_klein(test);
+	//	printf("\n");
+	//}
 	//u_klein	masterKey;
 	//u_klein	d;
 	//Key		keys;
 	//u_klein	test;
 
-	//str2u_klein(test, argv[1]);
+	str2u_klein(test, argv[1]);
 	//print_u_klein(test, "test");
 	//str2u_klein(masterKey, MASTER_KEY)
 	//key_schedule(keys, masterKey);
 
-	//display_cipher_differential(test);
+	display_cipher_differential(test);
 	return 0;
 
-}
-*/
+}*/
 
 
+/*
 
 int main()
 {
@@ -88,14 +88,18 @@ int main()
 	{
 		uk++;
 		if (!(uk%100000000))
-			printf("test number : %lld\n", uk);
-		random_u_klein_rand(m1);
+		{
+			printf("test number : %lld \t\t", uk);
+			display_u_klein(m1);
+			printf("\n");
+		}
+		random_u_klein_haynes(m1);
 		u_klein_xor(m2,m1,d);
 		if (verify_good_couple_condition_cheating(m1,m2))
 			print_u_klein(m1, "\tone found");
 	}
 	
-}
+}*/
 
 
 /*
