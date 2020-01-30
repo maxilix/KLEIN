@@ -22,6 +22,9 @@ all :
 test :
 	$(CC) sources/testmain.c $(SRCS) -o $(NAME)
 
+couples_search :
+	$(CC) sources/main_couples_search.c $(SRCS) -lpthread -o couples_search
+
 Wless :
 	$(CC) sources/main.c $(SRCS) -o $(NAME)
 
@@ -29,5 +32,7 @@ fclean :
 	rm -f $(NAME)
 
 re : fclean all
+
+
 
 
