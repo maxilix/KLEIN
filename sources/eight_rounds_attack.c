@@ -24,7 +24,7 @@ Bool		eight_rounds_attack(u_klein masterKey)
 
 		if ((k!=0) && !(k%100000000))
 		{
-			printf("\ttest number : %lld\t current u_klein : ", k);
+			printf("\ttest number : %11lld   current u_klein : ", k);
 			display_u_klein(kTilde);
 			printf("\n");
 		}
@@ -51,25 +51,31 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 {
 	u_klein			m1, m2;
 	int				cnt;
-	long long 		compteurTEST = 0;
+	long long 		nbTest = 0;
 
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
-	printf("C'est parti pour la recherche des couples !\n");
+
+	printf("searching for couples\n");
+
 	cnt = 0;
 	while(cnt < GOOD_COUPLES_NB)
 	{
-
-		compteurTEST++;
-		if(!(compteurTEST%100000000))
-			printf("nombre de test : %lld\n",compteurTEST);
-
 		random_u_klein_haynes(m1);
 		u_klein_xor(m2, m1, d);
 
+		nbTest++;
+		if (!(nbTest%100000000))
+		{
+			printf("\ttest number : %11lld   current u_klein : ", nbTest);
+			display_u_klein(m1);
+			printf("\n");
+		}
+
+
 		if(verify_good_couple_condition(m1, m2))
 		{
-			print_u_klein(m1,"Un couple candidat trouvé, m1 = ");
+			print_u_klein(m1, "\tGood couple found");
 			u_klein_dcp(goodCouples[cnt][0], m1);
 			if(verify_good_couple(goodCouples))
 				cnt += 4;
@@ -99,50 +105,54 @@ static Bool		extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], 
 		oracle(goodCouples[i][3], goodCouples[i][1]);
 	}
 	fclose(fd);
-	printf("couples extract from %s\n",filename);
+	printf("goodCouples extract from %s\n", filename);
 	return 1;
 }
 
 
 Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 {
-	printf("\tEntrée dans verify_good_couple\n");
+	printf("\tstart check strong good couple\n");
 	static int	index = 0;
 	int			cnt;
 	u_klein		m1, m2;
 	u_klein		d;
-	long long 	compteurTEST = 0;
+	long long 	nbTest = 0;
 
 	init_d(d);
 	u_klein_dcp(m1, goodCouples[index][0]);
 	cnt = 0;
 	for(long long k = 0 ; k < MAX_LONG ; k++)
 	{
-		compteurTEST++;
-		if(!(compteurTEST%100000000))
-			printf("\tnombre de test : %lld\n",compteurTEST);
+		nbTest++;
+		if (!(nbTest%100000000))
+		{
+			printf("\ttest number : %11lld   current u_klein : ", nbTest);
+			display_u_klein(m1);
+			printf("\n");
+		}
 
 		if(k == MAX_LONG_DIV2 && cnt <= 1)
 		{
-			printf("\tArret car k grand et cnt <= 1\n");
+			printf("\tbreak because half k tested and just %d u_klein found.\n",cnt);
 			break;
 		}
 		if (cnt == 4)
 		{
-			printf("\tArret car cnt = 4\n");
+			printf("\tBreak because 4 u_klein found\n");
 			break;
 		}
 		neutral_byte_modification(m1, k);
 		u_klein_xor(m2, m1, d);
 		if(verify_good_couple_condition(m1, m2) && add_good_couple(goodCouples, m1, m2, index + cnt))
 		{
-			print_u_klein(m1,"\t Un nouveau : ");
+			print_u_klein(m1,"\tOne found");
 			cnt++;
 		}
 	}
 	if(cnt == 4)
 	{
-		printf("\tWahou ! On en a chopé 4 :3\n");
+		printf("exit with 4 hope strong good couples\n");
 		index += 4;
 		return 1;
 	}

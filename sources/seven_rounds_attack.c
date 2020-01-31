@@ -24,7 +24,7 @@ Bool		seven_rounds_attack(u_klein masterKey)
 
 		if ((k!=0) && !(k%100000000))
 		{
-			printf("\ttest number : %lld\t current u_klein : ", k);
+			printf("\ttest number : %11lld   current u_klein : ", k);
 			display_u_klein(kTilde);
 			printf("\n");
 		}
@@ -49,9 +49,9 @@ Bool		seven_rounds_attack(u_klein masterKey)
 
 static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
-	u_klein		m1, m2;
-	int			cnt;
-	long long 	nbTest=0;
+	u_klein			m1, m2;
+	int				cnt;
+	long long 		nbTest=0;
 
 	if(extract_couples_from_file(goodCouples, d))		
 		return 1;
@@ -67,7 +67,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 		nbTest++;
 		if (!(nbTest%100000000))
 		{
-			printf("\ttest number : %lld\t current u_klein : ", nbTest);
+			printf("\ttest number : %11lld   current u_klein : ", nbTest);
 			display_u_klein(m1);
 			printf("\n");
 		}
@@ -75,15 +75,15 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 
 		if(verify_good_couple_condition(m1, m2) && add_good_couple(goodCouples, m1, m2, cnt))
 		{
-			cnt++;
 			print_u_klein(m1, "\tGood couple found");
+			cnt++;
 		}
 	}
 	return 1;
 }
 
 
-static Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
+static Bool		extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
 	FILE	*fd;
 	char	filename[UKLEIN_STRING_LENGTH + 27];
@@ -140,10 +140,11 @@ Bool	add_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein m1, u_klei
 
 
 void	init_d(u_klein d)
-{
-	for(int i = 0 ; i < NIBBLES_NB ; i++)
+{	
+	/*for(int i = 0 ; i < NIBBLES_NB ; i++)
 		d[i] = 0;
-	d[5] = 0xb;
+	d[5] = 0xb;*/
+	str2u_klein(d, DIFFERENTIAL);
 	print_u_klein(d,"differential initialization");
 }
 
@@ -204,7 +205,7 @@ Bool 	find_full_key(u_klein rop, u_klein const kTilde, u_klein const goodCouples
 
 		if ((k!=0) && !(k%100000000))
 		{
-			printf("\ttest number : %lld\t current u_klein : ", k);
+			printf("\ttest number : %11lld   current u_klein : ", k);
 			display_u_klein(testKey);
 			printf("\n");
 		}
