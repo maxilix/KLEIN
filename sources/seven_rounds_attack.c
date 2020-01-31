@@ -3,7 +3,7 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 static Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
 
 
-Bool	seven_rounds_attack(u_klein masterKey)
+Bool		seven_rounds_attack(u_klein masterKey)
 {
 	u_klein		goodCouples[GOOD_COUPLES_NB][4];
 	u_klein		d;
@@ -11,9 +11,7 @@ Bool	seven_rounds_attack(u_klein masterKey)
 	int			cntError, i;
 
 	printf("start seven round attack\n");
-
 	init_d(d);
-
 
 	if(!find_good_couples(goodCouples, d))
 		return 0;
@@ -37,7 +35,8 @@ Bool	seven_rounds_attack(u_klein masterKey)
 				cntError++;
 		if(cntError <= ERROR_THRESHOLD)
 		{
-			print_u_klein(kTilde,"Good k tilde found");
+			printf("Good k tilde found with %d/%d errors : ",cntError,GOOD_COUPLES_NB);
+			display_u_klein(kTilde);
 			printf("\n");
 			if(find_full_key(masterKey, kTilde, goodCouples))
 				return 1;
