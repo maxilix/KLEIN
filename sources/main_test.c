@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
 	}
 	printf("total : %d\n",cnt);
 	return 0;
-}
+}*/
 
 
 
@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
 	display_cipher_differential(test);
 	return 0;
 
-}
+}*/
 
 
 /*
@@ -99,6 +99,8 @@ int main(int argc, char const *argv[])
 
 	return 0;
 }
+
+
 
 /*
 int main(int argc, char const *argv[])

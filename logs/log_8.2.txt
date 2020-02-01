@@ -304,4 +304,4 @@ differential initialization :	00 00 0B 00 00 00 00 00
 	test number :  3600000000   current u_klein : EF 3A 6C C7 26 62 39 6D
 	test number :  3700000000   current u_klein : EF 48 6C C7 26 62 98 CD
 	test number :  3800000000   current u_klein : EF 56 6C C7 26 62 F7 2E
-^C
+^C \\abort after 17 hours

@@ -56,7 +56,7 @@ start kTilde search
 	test number : 300000000		 current u_klein : 01 01 0E 01 0A 03 00 00
 	test number : 400000000		 current u_klein : 01 07 0D 07 08 04 00 00
 	test number : 500000000		 current u_klein : 01 0D 0C 0D 06 05 00 00
-Good k tilde found :	01 0E 06 09 00 0A 0C 01
+Good kTilde found :	01 0E 06 09 00 0A 0C 01
 
 start full key search
 	test number : 100000000		 current u_klein : 06 59 F0 5A EC 11 01 0E
@@ -67,4 +67,5 @@ start full key search
 	test number : 600000000		 current u_klein : 26 39 C0 3A 4C 61 01 0E
 	test number : 700000000		 current u_klein : 26 99 B0 9A 2C 71 01 0E
 
-YAY ! The master key is :	01 23 45 67 89 AB CD EF
+Attack completed
+The master key is :	01 23 45 67 89 AB CD EF

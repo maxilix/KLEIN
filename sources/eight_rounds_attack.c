@@ -36,7 +36,7 @@ Bool		eight_rounds_attack(u_klein masterKey)
 				cntError++;
 		if(cntError <= ERROR_THRESHOLD)
 		{
-			printf("Good k tilde found with %d/%d errors : ",cntError,GOOD_COUPLES_NB);
+			printf("Good kTilde found with %d/%d errors : ",cntError,GOOD_COUPLES_NB);
 			display_u_klein(kTilde);
 			printf("\n");
 			if(find_full_key(masterKey, kTilde, goodCouples))

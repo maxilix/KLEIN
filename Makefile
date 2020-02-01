@@ -20,18 +20,14 @@ all :
 	$(CC) $(CFLAGS) sources/main.c $(SRCS) -o $(NAME)
 
 test :
-	$(CC) sources/testmain.c $(SRCS) -o ./tools/tmptool
+	$(CC) sources/main_test.c $(SRCS) -o test
 
-couples_search :
-	$(CC) sources/main_couples_search.c $(SRCS) -lpthread -o ./tools/coules_search
+multithreading :
+	$(CC) sources/main_multithreading.c $(SRCS) -lpthread -o multithreading
 
 Wless :
 	$(CC) sources/main.c $(SRCS) -o $(NAME)
 
-fclean :
-	rm -f $(NAME)
-
-re : fclean all
 
 
 
