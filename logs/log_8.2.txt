@@ -1,0 +1,307 @@
+cirthy@cirthy-MS-7978:~/Documents/Unilim/S9/DLC/KLEIN$ ./klein 
+haynes generator seed : 808025282
+start eight round attack
+differential initialization :	00 00 0B 00 00 00 00 00
+searching for couples
+		test number :   100000000   current u_klein : E2 23 66 C2 37 61 DD 8B
+	test number :   200000000   current u_klein : B4 14 DD 13 74 4E 4B 9C
+	test number :   300000000   current u_klein : 91 3E 34 1E F2 57 B0 DC
+	test number :   400000000   current u_klein : 8B F7 21 E3 40 80 99 93
+	test number :   500000000   current u_klein : A7 C8 23 FF 58 1D 4E BA
+	test number :   600000000   current u_klein : 17 27 57 DB 39 53 DD F0
+	test number :   700000000   current u_klein : FF 6B 85 4C 4E C2 28 74
+	test number :   800000000   current u_klein : 42 2D 72 32 14 97 B3 7F
+	Good couple found :	A9 9D 85 C6 D1 CC C2 02
+start check strong good couple
+differential initialization :	00 00 0B 00 00 00 00 00
+	test number :   100000000   current u_klein : EF 0E 85 C6 D1 CC 5F 50
+	test number :   200000000   current u_klein : EF 1C 85 C6 D1 CC BE B0
+	test number :   300000000   current u_klein : EF 2A 85 C6 D1 CC 1E 11
+	test number :   400000000   current u_klein : EF 38 85 C6 D1 CC 7D 71
+	test number :   500000000   current u_klein : EF 46 85 C6 D1 CC DC D1
+	test number :   600000000   current u_klein : EF 54 85 C6 D1 CC 3C 32
+	test number :   700000000   current u_klein : EF 62 85 C6 D1 CC 9B 92
+	test number :   800000000   current u_klein : EF 70 85 C6 D1 CC FA F2
+	test number :   900000000   current u_klein : EF 8E 85 C6 D1 CC 4A 53
+	test number :  1000000000   current u_klein : EF 9C 85 C6 D1 CC A9 B3
+	test number :  1100000000   current u_klein : EF AA 85 C6 D1 CC 09 14
+	test number :  1200000000   current u_klein : EF B8 85 C6 D1 CC 68 74
+	test number :  1300000000   current u_klein : EF C6 85 C6 D1 CC C7 D4
+	test number :  1400000000   current u_klein : EF D4 85 C6 D1 CC 27 35
+	test number :  1500000000   current u_klein : EF E2 85 C6 D1 CC 86 95
+	test number :  1600000000   current u_klein : EF F0 85 C6 D1 CC E5 F5
+	test number :  1700000000   current u_klein : EF 0F 85 C6 D1 CC 35 56
+	test number :  1800000000   current u_klein : EF 1D 85 C6 D1 CC 94 B6
+	test number :  1900000000   current u_klein : EF 2B 85 C6 D1 CC F3 17
+	test number :  2000000000   current u_klein : EF 39 85 C6 D1 CC 53 77
+	test number :  2100000000   current u_klein : EF 47 85 C6 D1 CC B2 D7
+	break because half k tested and just 0 u_klein found.
+	test number :   900000000   current u_klein : 25 B2 7F B8 85 E5 69 2D
+	test number :  1000000000   current u_klein : BA 82 C7 08 DE 58 A1 69
+	Good couple found :	64 96 EC 33 1C 5F AF 48
+start check strong good couple
+differential initialization :	00 00 0B 00 00 00 00 00
+	test number :   100000000   current u_klein : EF 0E EC 33 1C 5F 5F 50
+	test number :   200000000   current u_klein : EF 1C EC 33 1C 5F BE B0
+	One found :	04 65 EC 33 1C 5F 5F C0
+	test number :   300000000   current u_klein : EF 2A EC 33 1C 5F 1E 11
+	test number :   400000000   current u_klein : EF 38 EC 33 1C 5F 7D 71
+	test number :   500000000   current u_klein : EF 46 EC 33 1C 5F DC D1
+	test number :   600000000   current u_klein : EF 54 EC 33 1C 5F 3C 32
+	test number :   700000000   current u_klein : EF 62 EC 33 1C 5F 9B 92
+	One found :	AA EE EC 33 1C 5F 27 C2
+	test number :   800000000   current u_klein : EF 70 EC 33 1C 5F FA F2
+	test number :   900000000   current u_klein : EF 8E EC 33 1C 5F 4A 53
+	test number :  1000000000   current u_klein : EF 9C EC 33 1C 5F A9 B3
+	test number :  1100000000   current u_klein : EF AA EC 33 1C 5F 09 14
+	test number :  1200000000   current u_klein : EF B8 EC 33 1C 5F 68 74
+	test number :  1300000000   current u_klein : EF C6 EC 33 1C 5F C7 D4
+	test number :  1400000000   current u_klein : EF D4 EC 33 1C 5F 27 35
+	test number :  1500000000   current u_klein : EF E2 EC 33 1C 5F 86 95
+	One found :	6C 2B EC 33 1C 5F 74 B5
+	test number :  1600000000   current u_klein : EF F0 EC 33 1C 5F E5 F5
+	test number :  1700000000   current u_klein : EF 0F EC 33 1C 5F 35 56
+	One found :	D2 5E EC 33 1C 5F 97 56
+	Break because 4 u_klein found
+exit with 4 hope strong good couples
+	test number :  1100000000   current u_klein : 06 25 43 A4 4A 42 08 61
+	test number :  1200000000   current u_klein : 3B E1 88 1B A3 16 64 86
+	test number :  1300000000   current u_klein : 5D 4E 15 39 C5 D8 AF FF
+	test number :  1400000000   current u_klein : 80 B4 F9 D4 DA 6C DB B9
+	test number :  1500000000   current u_klein : D7 A8 2A 4F 6B F3 AB EA
+	test number :  1600000000   current u_klein : 65 93 4E A8 04 49 D6 FF
+	test number :  1700000000   current u_klein : 4F EB B4 7A CD 11 94 03
+	test number :  1800000000   current u_klein : 87 09 BA 69 D0 B9 CE F9
+	test number :  1900000000   current u_klein : 51 73 08 48 B6 1F EB D8
+	test number :  2000000000   current u_klein : C1 90 62 F4 18 58 94 00
+	test number :  2100000000   current u_klein : EA E7 38 B5 1E 08 F9 65
+	test number :  2200000000   current u_klein : C0 D1 A8 C1 E1 A4 2C DB
+	test number :  2300000000   current u_klein : 96 D3 99 B8 18 2A 94 0D
+	test number :  2400000000   current u_klein : 5F 55 B0 27 7C C7 68 35
+	test number :  2500000000   current u_klein : 3F CF 5D F4 F4 00 E2 0A
+	test number :  2600000000   current u_klein : 4A 98 BE 15 17 DF D6 04
+	test number :  2700000000   current u_klein : 83 37 BA C9 3C A5 FF BA
+	test number :  2800000000   current u_klein : 3E 22 F6 5B 5A 46 6C FA
+	test number :  2900000000   current u_klein : 4E C2 D2 52 78 F6 BF 00
+	test number :  3000000000   current u_klein : E6 8E 9A 70 FB D8 00 24
+	test number :  3100000000   current u_klein : 3B FC 08 95 79 6D 95 5D
+	test number :  3200000000   current u_klein : 3F 64 E0 AB D8 90 CA 12
+	test number :  3300000000   current u_klein : 16 5E 81 07 4E 95 23 5F
+	test number :  3400000000   current u_klein : D4 20 1A 0B 1F C8 2A AD
+	test number :  3500000000   current u_klein : 9C 61 71 26 F1 5A 21 B1
+	test number :  3600000000   current u_klein : 71 7A 5B 3F D7 CC 2A 6E
+	test number :  3700000000   current u_klein : 98 C0 1A 1D E7 E4 FF 06
+	test number :  3800000000   current u_klein : F3 CC E8 C0 85 85 E6 CF
+	test number :  3900000000   current u_klein : B6 F4 A0 A5 83 AF AB AB
+	test number :  4000000000   current u_klein : F5 B0 05 13 D6 FD 57 E7
+	test number :  4100000000   current u_klein : C3 87 67 9F 90 34 64 3F
+	Good couple found :	E6 48 D1 77 36 F8 F8 33
+start check strong good couple
+differential initialization :	00 00 0B 00 00 00 00 00
+	test number :   100000000   current u_klein : EF 0E D1 77 36 F8 5F 50
+	test number :   200000000   current u_klein : EF 1C D1 77 36 F8 BE B0
+	test number :   300000000   current u_klein : EF 2A D1 77 36 F8 1E 11
+	test number :   400000000   current u_klein : EF 38 D1 77 36 F8 7D 71
+	test number :   500000000   current u_klein : EF 46 D1 77 36 F8 DC D1
+	test number :   600000000   current u_klein : EF 54 D1 77 36 F8 3C 32
+	test number :   700000000   current u_klein : EF 62 D1 77 36 F8 9B 92
+	test number :   800000000   current u_klein : EF 70 D1 77 36 F8 FA F2
+	test number :   900000000   current u_klein : EF 8E D1 77 36 F8 4A 53
+	test number :  1000000000   current u_klein : EF 9C D1 77 36 F8 A9 B3
+	test number :  1100000000   current u_klein : EF AA D1 77 36 F8 09 14
+	One found :	11 44 D1 77 36 F8 AD 54
+	test number :  1200000000   current u_klein : EF B8 D1 77 36 F8 68 74
+	test number :  1300000000   current u_klein : EF C6 D1 77 36 F8 C7 D4
+	test number :  1400000000   current u_klein : EF D4 D1 77 36 F8 27 35
+	test number :  1500000000   current u_klein : EF E2 D1 77 36 F8 86 95
+	test number :  1600000000   current u_klein : EF F0 D1 77 36 F8 E5 F5
+	test number :  1700000000   current u_klein : EF 0F D1 77 36 F8 35 56
+	test number :  1800000000   current u_klein : EF 1D D1 77 36 F8 94 B6
+	test number :  1900000000   current u_klein : EF 2B D1 77 36 F8 F3 17
+	test number :  2000000000   current u_klein : EF 39 D1 77 36 F8 53 77
+	test number :  2100000000   current u_klein : EF 47 D1 77 36 F8 B2 D7
+	break because half k tested and just 1 u_klein found.
+	test number :  4200000000   current u_klein : 44 D0 E4 F9 56 7E 34 0A
+	test number :  4300000000   current u_klein : 8B 02 83 3C E9 8C 6D A3
+	test number :  4400000000   current u_klein : AB 95 C9 5F 2C 81 7A A4
+	test number :  4500000000   current u_klein : B8 F0 27 B6 62 D2 B3 FC
+	test number :  4600000000   current u_klein : D6 9A D8 AF 3B F0 47 4A
+	test number :  4700000000   current u_klein : 19 FA A6 E5 5B 8D EF 08
+	test number :  4800000000   current u_klein : 82 68 55 3E E1 D4 CA 04
+	test number :  4900000000   current u_klein : 57 7A 35 8C 10 58 BC 56
+	test number :  5000000000   current u_klein : 9A 88 73 FD 88 94 AD BE
+	test number :  5100000000   current u_klein : 50 1A 07 EA 1A 39 FA CB
+	test number :  5200000000   current u_klein : AB 85 76 B9 D6 BA F0 55
+	test number :  5300000000   current u_klein : BF 52 40 2B 2C 6A 30 95
+	test number :  5400000000   current u_klein : 90 F9 81 FC 8C 2D 07 31
+	test number :  5500000000   current u_klein : 41 DF 32 35 06 63 96 D5
+	test number :  5600000000   current u_klein : 06 6C F8 FA 98 F6 D5 4A
+	test number :  5700000000   current u_klein : D1 08 23 BC C2 EB 6F A1
+	test number :  5800000000   current u_klein : C8 49 EF C5 23 9C 56 9F
+	test number :  5900000000   current u_klein : 0C 97 25 0F B8 09 2A A0
+	test number :  6000000000   current u_klein : 92 4A 99 2B 81 96 90 68
+	test number :  6100000000   current u_klein : 9D E7 8C 49 1B 05 D9 D5
+	test number :  6200000000   current u_klein : 31 E8 3A 94 14 FB E9 70
+	test number :  6300000000   current u_klein : 60 A2 8C 62 89 56 2F A0
+	test number :  6400000000   current u_klein : 50 AD 15 56 97 C2 89 A8
+	test number :  6500000000   current u_klein : 22 50 58 0D CB D2 0D 4C
+	test number :  6600000000   current u_klein : DB 12 6F 61 C3 82 40 A0
+	test number :  6700000000   current u_klein : 8E 7B 23 89 A9 90 7C DA
+	Good couple found :	FD 1A 8A 30 E1 04 8F 15
+start check strong good couple
+differential initialization :	00 00 0B 00 00 00 00 00
+	test number :   100000000   current u_klein : EF 0E 8A 30 E1 04 5F 50
+	test number :   200000000   current u_klein : EF 1C 8A 30 E1 04 BE B0
+	test number :   300000000   current u_klein : EF 2A 8A 30 E1 04 1E 11
+	test number :   400000000   current u_klein : EF 38 8A 30 E1 04 7D 71
+	test number :   500000000   current u_klein : EF 46 8A 30 E1 04 DC D1
+	test number :   600000000   current u_klein : EF 54 8A 30 E1 04 3C 32
+	test number :   700000000   current u_klein : EF 62 8A 30 E1 04 9B 92
+	test number :   800000000   current u_klein : EF 70 8A 30 E1 04 FA F2
+	test number :   900000000   current u_klein : EF 8E 8A 30 E1 04 4A 53
+	test number :  1000000000   current u_klein : EF 9C 8A 30 E1 04 A9 B3
+	test number :  1100000000   current u_klein : EF AA 8A 30 E1 04 09 14
+	test number :  1200000000   current u_klein : EF B8 8A 30 E1 04 68 74
+	test number :  1300000000   current u_klein : EF C6 8A 30 E1 04 C7 D4
+	test number :  1400000000   current u_klein : EF D4 8A 30 E1 04 27 35
+	test number :  1500000000   current u_klein : EF E2 8A 30 E1 04 86 95
+	test number :  1600000000   current u_klein : EF F0 8A 30 E1 04 E5 F5
+	test number :  1700000000   current u_klein : EF 0F 8A 30 E1 04 35 56
+	test number :  1800000000   current u_klein : EF 1D 8A 30 E1 04 94 B6
+	test number :  1900000000   current u_klein : EF 2B 8A 30 E1 04 F3 17
+	test number :  2000000000   current u_klein : EF 39 8A 30 E1 04 53 77
+	test number :  2100000000   current u_klein : EF 47 8A 30 E1 04 B2 D7
+	break because half k tested and just 0 u_klein found.
+	test number :  6800000000   current u_klein : 5F D2 4A 94 AB E0 57 E5
+	test number :  6900000000   current u_klein : 61 AF 32 01 54 E6 1A 21
+	test number :  7000000000   current u_klein : B7 57 1A 67 6F D3 29 63
+	test number :  7100000000   current u_klein : 66 63 C9 6C F8 49 37 4B
+	test number :  7200000000   current u_klein : 90 3A F3 00 5B 81 F1 5F
+	test number :  7300000000   current u_klein : 59 42 0A 6E 00 B0 30 93
+	test number :  7400000000   current u_klein : C5 F4 19 AF E4 6F A3 34
+	test number :  7500000000   current u_klein : F7 C6 29 46 11 2F B8 61
+	test number :  7600000000   current u_klein : 03 30 DF D2 D0 42 8E 34
+	test number :  7700000000   current u_klein : 0B 98 7A 3F EA FB DC EC
+	Good couple found :	F4 7E 89 55 22 83 46 CE
+start check strong good couple
+differential initialization :	00 00 0B 00 00 00 00 00
+	test number :   100000000   current u_klein : EF 0E 89 55 22 83 5F 50
+	test number :   200000000   current u_klein : EF 1C 89 55 22 83 BE B0
+	test number :   300000000   current u_klein : EF 2A 89 55 22 83 1E 11
+	test number :   400000000   current u_klein : EF 38 89 55 22 83 7D 71
+	test number :   500000000   current u_klein : EF 46 89 55 22 83 DC D1
+	test number :   600000000   current u_klein : EF 54 89 55 22 83 3C 32
+	test number :   700000000   current u_klein : EF 62 89 55 22 83 9B 92
+	test number :   800000000   current u_klein : EF 70 89 55 22 83 FA F2
+	test number :   900000000   current u_klein : EF 8E 89 55 22 83 4A 53
+	test number :  1000000000   current u_klein : EF 9C 89 55 22 83 A9 B3
+	test number :  1100000000   current u_klein : EF AA 89 55 22 83 09 14
+	test number :  1200000000   current u_klein : EF B8 89 55 22 83 68 74
+	test number :  1300000000   current u_klein : EF C6 89 55 22 83 C7 D4
+	test number :  1400000000   current u_klein : EF D4 89 55 22 83 27 35
+	test number :  1500000000   current u_klein : EF E2 89 55 22 83 86 95
+	test number :  1600000000   current u_klein : EF F0 89 55 22 83 E5 F5
+	test number :  1700000000   current u_klein : EF 0F 89 55 22 83 35 56
+	test number :  1800000000   current u_klein : EF 1D 89 55 22 83 94 B6
+	test number :  1900000000   current u_klein : EF 2B 89 55 22 83 F3 17
+	test number :  2000000000   current u_klein : EF 39 89 55 22 83 53 77
+	test number :  2100000000   current u_klein : EF 47 89 55 22 83 B2 D7
+	break because half k tested and just 0 u_klein found.
+	test number :  7800000000   current u_klein : 05 67 48 43 0B 2E 0E 55
+	test number :  7900000000   current u_klein : 32 13 21 21 6A EA 86 D4
+	test number :  8000000000   current u_klein : A7 13 B9 16 60 2A 74 FD
+	test number :  8100000000   current u_klein : 67 EF 50 AE A6 B0 CF 4F
+	test number :  8200000000   current u_klein : 86 EE 44 6D 25 E8 C8 EF
+	test number :  8300000000   current u_klein : 36 97 6D 25 05 A1 A7 9C
+	test number :  8400000000   current u_klein : 8D 51 5F E4 AD 1D 7A 0D
+	test number :  8500000000   current u_klein : 8C A4 7A C3 D5 F1 F5 0A
+	test number :  8600000000   current u_klein : 48 F7 FB 16 84 DE DE F2
+	test number :  8700000000   current u_klein : F5 A1 CB 6E D1 74 20 CB
+	test number :  8800000000   current u_klein : 94 49 8D 57 54 6D 76 32
+	test number :  8900000000   current u_klein : 5B 36 93 BA B2 0D CC 5E
+	test number :  9000000000   current u_klein : 3D E0 19 99 02 5E 4F 94
+	test number :  9100000000   current u_klein : 6C CE 06 15 8A DF 67 E2
+	test number :  9200000000   current u_klein : ED 47 01 99 AF 63 BE 36
+	test number :  9300000000   current u_klein : D4 E3 69 9B 47 5E 93 9D
+	test number :  9400000000   current u_klein : 63 18 7A DF 67 C1 59 65
+	test number :  9500000000   current u_klein : 8E 3D FD 23 65 3C 23 AE
+	test number :  9600000000   current u_klein : 68 CB 97 A2 B4 B9 A6 2D
+	test number :  9700000000   current u_klein : 26 38 D8 71 49 7B 47 FA
+	test number :  9800000000   current u_klein : CA EB BC 02 28 ED B7 47
+	test number :  9900000000   current u_klein : 69 6C 4C E3 95 4E 38 1A
+	test number : 10000000000   current u_klein : 25 12 1D CD 53 10 15 07
+	test number : 10100000000   current u_klein : 12 64 8E 85 37 36 E5 D8
+	test number : 10200000000   current u_klein : 53 C9 CC 4C 52 73 49 C8
+	test number : 10300000000   current u_klein : FD A8 C0 4F 18 F5 CC 5C
+	test number : 10400000000   current u_klein : 13 9A 2E F4 1C 67 EE 1C
+	test number : 10500000000   current u_klein : C7 D4 47 D2 5F 8C B9 8D
+	test number : 10600000000   current u_klein : 2E 0E 66 B7 F3 7F 19 79
+	test number : 10700000000   current u_klein : 4B 70 46 8F 6A 3D 62 2B
+	test number : 10800000000   current u_klein : 42 A1 A9 51 57 BA 67 C5
+	test number : 10900000000   current u_klein : 36 07 F0 71 B9 88 51 7E
+	test number : 11000000000   current u_klein : 3B 0A 48 6C C1 2A 96 96
+	test number : 11100000000   current u_klein : 53 12 8A AE F1 4E A0 15
+	test number : 11200000000   current u_klein : A3 A5 59 1D 19 5E 24 AF
+	test number : 11300000000   current u_klein : 5F 3A 36 AB 09 9E 98 D2
+	test number : 11400000000   current u_klein : 79 2A 3E 75 21 D8 5B AD
+	test number : 11500000000   current u_klein : 05 FB 39 D6 E0 9A 8A 6A
+	test number : 11600000000   current u_klein : 46 04 0C 42 26 A6 DA 37
+	test number : 11700000000   current u_klein : 31 DD D6 5B D1 00 9C 30
+	test number : 11800000000   current u_klein : E8 CC F5 FD 41 F9 54 A9
+	test number : 11900000000   current u_klein : 80 6A 41 21 25 B0 44 45
+	test number : 12000000000   current u_klein : 1B 1C 6E FA 19 4F 9B 82
+	test number : 12100000000   current u_klein : CD 3B BD CA 5D A9 96 D3
+	test number : 12200000000   current u_klein : 9A 5E 6A 2C 3E 48 CD C5
+	test number : 12300000000   current u_klein : B4 DC 5E B7 3A 4B 60 6F
+	test number : 12400000000   current u_klein : 21 3C 4D 5F 5D F3 9D 53
+	test number : 12500000000   current u_klein : 02 D5 78 03 A6 24 54 42
+	test number : 12600000000   current u_klein : 7C 2E 3A 0D 8F 9E F1 EB
+	test number : 12700000000   current u_klein : 93 A0 4E A4 97 32 94 8B
+	test number : 12800000000   current u_klein : 68 C0 66 7B D8 A8 81 E5
+	test number : 12900000000   current u_klein : 01 F7 F3 2F 6F 93 90 CA
+	test number : 13000000000   current u_klein : 91 9B 22 BA A8 FE AC 03
+	test number : 13100000000   current u_klein : 3B 33 DC 01 6E A6 D1 EE
+	Good couple found :	83 1D 6C C7 26 62 07 36
+start check strong good couple
+differential initialization :	00 00 0B 00 00 00 00 00
+	test number :   100000000   current u_klein : EF 0E 6C C7 26 62 5F 50
+	test number :   200000000   current u_klein : EF 1C 6C C7 26 62 BE B0
+	test number :   300000000   current u_klein : EF 2A 6C C7 26 62 1E 11
+	test number :   400000000   current u_klein : EF 38 6C C7 26 62 7D 71
+	test number :   500000000   current u_klein : EF 46 6C C7 26 62 DC D1
+	test number :   600000000   current u_klein : EF 54 6C C7 26 62 3C 32
+	test number :   700000000   current u_klein : EF 62 6C C7 26 62 9B 92
+	One found :	06 49 6C C7 26 62 67 C2
+	test number :   800000000   current u_klein : EF 70 6C C7 26 62 FA F2
+	test number :   900000000   current u_klein : EF 8E 6C C7 26 62 4A 53
+	test number :  1000000000   current u_klein : EF 9C 6C C7 26 62 A9 B3
+	test number :  1100000000   current u_klein : EF AA 6C C7 26 62 09 14
+	test number :  1200000000   current u_klein : EF B8 6C C7 26 62 68 74
+	test number :  1300000000   current u_klein : EF C6 6C C7 26 62 C7 D4
+	test number :  1400000000   current u_klein : EF D4 6C C7 26 62 27 35
+	test number :  1500000000   current u_klein : EF E2 6C C7 26 62 86 95
+	test number :  1600000000   current u_klein : EF F0 6C C7 26 62 E5 F5
+	One found :	83 1D 6C C7 26 62 07 36
+	test number :  1700000000   current u_klein : EF 0F 6C C7 26 62 35 56
+	test number :  1800000000   current u_klein : EF 1D 6C C7 26 62 94 B6
+	test number :  1900000000   current u_klein : EF 2B 6C C7 26 62 F3 17
+	test number :  2000000000   current u_klein : EF 39 6C C7 26 62 53 77
+	test number :  2100000000   current u_klein : EF 47 6C C7 26 62 B2 D7
+	test number :  2200000000   current u_klein : EF 55 6C C7 26 62 12 38
+	test number :  2300000000   current u_klein : EF 63 6C C7 26 62 71 98
+	test number :  2400000000   current u_klein : EF 71 6C C7 26 62 D0 F8
+	test number :  2500000000   current u_klein : EF 8F 6C C7 26 62 20 59
+	test number :  2600000000   current u_klein : EF 9D 6C C7 26 62 8F A9
+	test number :  2700000000   current u_klein : EF AB 6C C7 26 62 EE 0A
+	test number :  2800000000   current u_klein : EF B9 6C C7 26 62 4E 6A
+	test number :  2900000000   current u_klein : EF C7 6C C7 26 62 AD CA
+	test number :  3000000000   current u_klein : EF D5 6C C7 26 62 0D 2B
+	test number :  3100000000   current u_klein : EF E3 6C C7 26 62 6C 8B
+	test number :  3200000000   current u_klein : EF F1 6C C7 26 62 CB EB
+	test number :  3300000000   current u_klein : EF 00 6C C7 26 62 2B 4C
+	test number :  3400000000   current u_klein : EF 1E 6C C7 26 62 7A AC
+	test number :  3500000000   current u_klein : EF 2C 6C C7 26 62 D9 0D
+	test number :  3600000000   current u_klein : EF 3A 6C C7 26 62 39 6D
+	test number :  3700000000   current u_klein : EF 48 6C C7 26 62 98 CD
+	test number :  3800000000   current u_klein : EF 56 6C C7 26 62 F7 2E
+^C

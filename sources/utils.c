@@ -63,6 +63,15 @@ Bool	str2u_klein(u_klein rop, char const *str)
 	return 1;
 }
 
+void 	u_klein2str(char* rop, u_klein const uk)
+{
+	rop[0] = '0';
+	rop[1] = 'x';
+	for(int i = 0 ; i < NIBBLES_NB ; i++)
+		rop[i+2] = hex2char(uk[i]);
+	rop[UKLEIN_STRING_LENGTH] = '\0';
+}
+
 
 int		u_klein_cmp(u_klein const op1, u_klein const op2)
 {

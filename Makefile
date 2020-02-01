@@ -23,7 +23,7 @@ test :
 	$(CC) sources/testmain.c $(SRCS) -o ./tools/tmptool
 
 couples_search :
-	$(CC) sources/main_couples_search.c $(SRCS) -lpthread -o ./tools/couples_search
+	$(CC) sources/main_couples_search.c $(SRCS) -lpthread -o ./tools/coules_search
 
 Wless :
 	$(CC) sources/main.c $(SRCS) -o $(NAME)

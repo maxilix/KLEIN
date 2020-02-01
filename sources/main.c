@@ -3,22 +3,23 @@
 
 int main()
 {
-	u_klein	master_key;
-	init_generators();
-	
-	switch(ROUNDS_NB)
-	{
-		case 7 :
-			seven_rounds_attack(master_key);
-			break;
-		case 8 :
-			eight_rounds_attack(master_key);
-			break;
-		case 12 :
-			printf("HA HA ...\n");
-			break;
-	}
+	u_klein		master_key_found;
+	Bool 		result;
 
-	print_u_klein(master_key, "YAY ! The master key is");
+	init_generators();
+
+#if ROUNDS_NB == 7
+	result = seven_rounds_attack(master_key_found);
+#elif ROUNDS_NB == 8
+	result = eight_rounds_attack(master_key_found);
+#else
+	printf("Error ROUNDS_NB\n");
+	return 0;
+#endif
+
+	if(result)
+		print_u_klein(master_key_found, "Attack completed\nThe master key is");
+	else
+		printf("Attack failed\n");
 	return 0;
 }

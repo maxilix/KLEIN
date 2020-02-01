@@ -10,12 +10,12 @@
 #define		NIBBLES_NB				16
 #define		NIBBLES_NB_DIV2			8
 #define		NIBBLES_NB_DIV4			4
-#define		ROUNDS_NB				8
+#define		ROUNDS_NB				7
 #define		MAX_LONG				4294967296
 #define		MAX_LONG_DIV2			2147483648
 #define 	MAX_LONG_LONG 			18446744073709551616
 #define		UKLEIN_STRING_LENGTH	18
-#define		MASTER_KEY				"0x0123456789ABCDEF"
+#define		MASTER_KEY				"0x1111111111111111"
 #define 	DIFFERENTIAL 			"0x00000B0000000000"
 #define		GOOD_COUPLES_NB			8
 #define		ERROR_THRESHOLD			1
@@ -50,6 +50,7 @@ void	u_klein_dcp(u_klein rop, u_klein const op);
 char	hex2char(Nibble const hex);
 Nibble	char2nibble(char const c);
 Bool	str2u_klein(u_klein rop, char const *str);
+void 	u_klein2str(char* rop, u_klein const uk);
 int		u_klein_cmp(u_klein const op1, u_klein const op2);
 void	u_klein_xor(u_klein rop, u_klein const op1, u_klein const op2);
 void	init_d(u_klein d);

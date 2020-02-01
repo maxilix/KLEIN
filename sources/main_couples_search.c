@@ -6,22 +6,13 @@
 #include 	<unistd.h>
 
 #define 	_REENTRANT
-#define 	THREAD_NB 		2
-#define 	COUPLES_NB 		5
+#define 	THREAD_NB 		4
+#define 	COUPLES_NB 		6
 
 FILE* 			fd;
 u_klein 		d;
 int 			found;
 
-void u_klein2str(char* rop, u_klein uk)
-{
-	rop[0] = '0';
-	rop[1] = 'x';
-	for(int i = 0 ; i < NIBBLES_NB ; i++)
-		rop[i+2] = hex2char(uk[i]);
-	rop[UKLEIN_STRING_LENGTH] = '\0';
-}
-	
 
 
 void* search(void * arg)
@@ -41,7 +32,7 @@ void* search(void * arg)
 		{
 			u_klein2str(str, m1);
 			printf("thread %d : %s\n", id , str);
-			fprintf(fd,"0x%s\n",str);
+			fprintf(fd,"%s\n",str);
 			found++;
 		}
 	}
@@ -63,7 +54,7 @@ int main()
 #elif ROUNDS_NB == 8
 	sprintf(filename, "couples/eight_rounds/%s.txt", MASTER_KEY);
 #else
-	printf("Erreur ROUNDS_NB\n");
+	printf("Error ROUNDS_NB\n");
 	return 1;
 #endif
 	printf("filename to save couples : %s\n", filename);

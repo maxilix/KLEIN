@@ -1,0 +1,14 @@
+differential initialization :	00 00 0B 00 00 00 00 00
+haynes generator seed : 2076041103
+6 couples search without cheating on 7 rounds with 4 threads.
+filename to save couples : couples/seven_rounds/0x0123456789ABCDEF.txt
+start thread 3
+start thread 2
+start thread 1
+start thread 0
+thread 1 : 0xEBB771C628D29B39
+thread 3 : 0x346A1ABC19A8CDCA
+thread 1 : 0xB612AD036AE81A2B
+thread 1 : 0xB82F936421B267CE
+thread 1 : 0x2C83A04F677A054F
+thread 3 : 0x4A1D8805E79034E2

@@ -1,0 +1,67 @@
+cirthy@cirthy-MS-7978:~/Documents/Unilim/S9/DLC/KLEIN$ ./derive_neutral_bits 0xB6C1B6ACEF675FEA
+differential initialization :	00 00 0B 00 00 00 00 00
+	one new :	23 C6 B6 AC EF 67 6B 30
+	nombre de test : 100000000
+	nombre de test : 200000000
+	one new :	1A 9E B6 AC EF 67 D8 C0
+	nombre de test : 300000000
+	one new :	42 CB B6 AC EF 67 14 31
+	nombre de test : 400000000
+	nombre de test : 500000000
+	one new :	A4 49 B6 AC EF 67 2C 12
+	nombre de test : 600000000
+	nombre de test : 700000000
+	nombre de test : 800000000
+	one new :	15 76 B6 AC EF 67 F0 53
+	nombre de test : 900000000
+	one new :	61 14 B6 AC EF 67 62 73
+	nombre de test : 1000000000
+	one new :	C2 C6 B6 AC EF 67 44 C3
+	one new :	5F E3 B6 AC EF 67 F6 14
+	nombre de test : 1100000000
+	one new :	4D 9D B6 AC EF 67 09 14
+	nombre de test : 1200000000
+	nombre de test : 1300000000
+	nombre de test : 1400000000
+	nombre de test : 1500000000
+	nombre de test : 1600000000
+	nombre de test : 1700000000
+	one new :	4C 9B B6 AC EF 67 F2 B6
+	nombre de test : 1800000000
+	one new :	C4 26 B6 AC EF 67 F9 07
+	nombre de test : 1900000000
+	one new :	78 20 B6 AC EF 67 BC 37
+	nombre de test : 2000000000
+	nombre de test : 2100000000
+	nombre de test : 2200000000
+	one new :	42 FF B6 AC EF 67 67 58
+	one new :	9D D8 B6 AC EF 67 B0 88
+	nombre de test : 2300000000
+	one new :	B4 4F B6 AC EF 67 DD C8
+	one new :	75 34 B6 AC EF 67 9F E8
+	nombre de test : 2400000000
+	nombre de test : 2500000000
+	nombre de test : 2600000000
+	one new :	00 75 B6 AC EF 67 0B B9
+	nombre de test : 2700000000
+	nombre de test : 2800000000
+	nombre de test : 2900000000
+	one new :	2E 69 B6 AC EF 67 EE EA
+	one new :	B6 C1 B6 AC EF 67 5F EA
+	nombre de test : 3000000000
+	one new :	87 A9 B6 AC EF 67 E8 3B
+	nombre de test : 3100000000
+	nombre de test : 3200000000
+	nombre de test : 3300000000
+	one new :	5E AA B6 AC EF 67 F8 8C
+	nombre de test : 3400000000
+	nombre de test : 3500000000
+	nombre de test : 3600000000
+	nombre de test : 3700000000
+	one new :	BF 98 B6 AC EF 67 0E FD
+	nombre de test : 3800000000
+	nombre de test : 3900000000
+	nombre de test : 4000000000
+	nombre de test : 4100000000
+	nombre de test : 4200000000
+total : 22

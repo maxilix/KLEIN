@@ -1,5 +1,6 @@
 #include	"../klein.h"
 static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
+static Bool	save_couples_to_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const master_key_found);
 static Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d);
 
 
@@ -39,7 +40,10 @@ Bool		eight_rounds_attack(u_klein masterKey)
 			display_u_klein(kTilde);
 			printf("\n");
 			if(find_full_key(masterKey, kTilde, goodCouples))
+			{
+				save_couples_to_file(goodCouples, masterKey);
 				return 1;
+			}
 			printf("Unsuccessful\n");
 		}
 	}
@@ -85,7 +89,38 @@ static Bool	find_good_couples(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein c
 }
 
 
-static Bool		extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
+static Bool	save_couples_to_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const masterKeyFound)
+{
+	FILE		*fd;
+	char		filename[UKLEIN_STRING_LENGTH + 27];
+	char		buf[UKLEIN_STRING_LENGTH + 1];
+	u_klein 	masterKey;
+
+	str2u_klein(masterKey,MASTER_KEY);
+	if(u_klein_cmp(masterKey,masterKeyFound))
+		return 0;
+
+	sprintf(filename, "couples/eight_rounds/%s.txt", MASTER_KEY);
+	fd = fopen(filename, "r");
+	if(fd)
+	{
+		fclose(fd);
+		return 0;
+	}
+
+	fd = fopen(filename, "w");
+	for(int i = 0 ; i < GOOD_COUPLES_NB ; i++)
+	{
+		u_klein2str(buf,goodCouples[i][0]);
+		fprintf(fd, "%s\n", buf);
+	}
+	fclose(fd);
+	printf("goodCouples saved in %s\n", filename);
+	return 1;
+}
+
+
+static Bool	extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], u_klein const d)
 {
 	FILE	*fd;
 	char	filename[UKLEIN_STRING_LENGTH + 27];
@@ -112,7 +147,7 @@ static Bool		extract_couples_from_file(u_klein goodCouples[GOOD_COUPLES_NB][4], 
 
 Bool	verify_good_couple(u_klein goodCouples[GOOD_COUPLES_NB][4])
 {
-	printf("\tstart check strong good couple\n");
+	printf("start check strong good couple\n");
 	static int	index = 0;
 	int			cnt;
 	u_klein		m1, m2;

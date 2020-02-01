@@ -1,0 +1,94 @@
+cirthy@cirthy-MS-7978:~/Documents/Unilim/S9/DLC/KLEIN$ ./klein 
+haynes generator seed : 31500996
+start eight round attack
+differential initialization :	00 00 0B 00 00 00 00 00
+goodCouples extract from couples/eight_rounds/0x0123456789ABCDEF.txt
+start kTilde search
+	test number :   100000000   current u_klein : 00 05 0F 05 0E 01 00 00
+	test number :   200000000   current u_klein : 00 0B 0E 0B 0C 02 00 00
+	test number :   300000000   current u_klein : 01 01 0E 01 0A 03 00 00
+	test number :   400000000   current u_klein : 01 07 0D 07 08 04 00 00
+	test number :   500000000   current u_klein : 01 0D 0C 0D 06 05 00 00
+	test number :   600000000   current u_klein : 02 03 0C 03 04 06 00 00
+	test number :   700000000   current u_klein : 02 09 0B 09 02 07 00 00
+	test number :   800000000   current u_klein : 02 0F 0A 0F 00 08 00 00
+	test number :   900000000   current u_klein : 03 05 0A 04 0E 09 00 00
+	test number :  1000000000   current u_klein : 03 0B 09 0A 0C 0A 00 00
+	test number :  1100000000   current u_klein : 04 01 09 00 0A 0B 00 00
+	test number :  1200000000   current u_klein : 04 07 08 06 08 0C 00 00
+	test number :  1300000000   current u_klein : 04 0D 07 0C 06 0D 00 00
+	test number :  1400000000   current u_klein : 05 03 07 02 04 0E 00 00
+	test number :  1500000000   current u_klein : 05 09 06 08 02 0F 00 00
+	test number :  1600000000   current u_klein : 05 0F 05 0E 01 00 00 00
+	test number :  1700000000   current u_klein : 06 05 05 03 0F 01 00 00
+	test number :  1800000000   current u_klein : 06 0B 04 09 0D 02 00 00
+	test number :  1900000000   current u_klein : 07 01 03 0F 0B 03 00 00
+	test number :  2000000000   current u_klein : 07 07 03 05 09 04 00 00
+	test number :  2100000000   current u_klein : 07 0D 02 0B 07 05 00 00
+	test number :  2200000000   current u_klein : 08 03 02 01 05 06 00 00
+	test number :  2300000000   current u_klein : 08 09 01 07 03 07 00 00
+	test number :  2400000000   current u_klein : 08 0F 00 0D 01 08 00 00
+	test number :  2500000000   current u_klein : 09 05 00 02 0F 09 00 00
+	test number :  2600000000   current u_klein : 09 0A 0F 08 0D 0A 00 00
+	test number :  2700000000   current u_klein : 0A 00 0E 0E 0B 0B 00 00
+	test number :  2800000000   current u_klein : 0A 06 0E 04 09 0C 00 00
+	test number :  2900000000   current u_klein : 0A 0C 0D 0A 07 0D 00 00
+	test number :  3000000000   current u_klein : 0B 02 0D 00 05 0E 00 00
+	test number :  3100000000   current u_klein : 0B 08 0C 06 03 0F 00 00
+	test number :  3200000000   current u_klein : 0B 0E 0B 0C 02 00 00 00
+	test number :  3300000000   current u_klein : 0C 04 0B 02 00 01 00 00
+Good k tilde found with 1/8 errors : 0C 08 09 09 0E 0D 0A 04
+start full key search
+	test number :   100000000   current u_klein : 09 59 FE 5D EA 14 0C 08
+	test number :   200000000   current u_klein : 09 B9 EE BD CA 24 0C 08
+	test number :   300000000   current u_klein : 19 19 EE 1D AA 34 0C 08
+	test number :   400000000   current u_klein : 19 79 DE 7D 8A 44 0C 08
+	test number :   500000000   current u_klein : 19 D9 CE DD 6A 54 0C 08
+	test number :   600000000   current u_klein : 29 39 CE 3D 4A 64 0C 08
+	test number :   700000000   current u_klein : 29 99 BE 9D 2A 74 0C 08
+	test number :   800000000   current u_klein : 29 F9 AE FD 0A 84 0C 08
+	test number :   900000000   current u_klein : 39 59 AE 4D EA 94 0C 08
+	test number :  1000000000   current u_klein : 39 B9 9E AD CA A4 0C 08
+	test number :  1100000000   current u_klein : 49 19 9E 0D AA B4 0C 08
+	test number :  1200000000   current u_klein : 49 79 8E 6D 8A C4 0C 08
+	test number :  1300000000   current u_klein : 49 D9 7E CD 6A D4 0C 08
+	test number :  1400000000   current u_klein : 59 39 7E 2D 4A E4 0C 08
+	test number :  1500000000   current u_klein : 59 99 6E 8D 2A F4 0C 08
+	test number :  1600000000   current u_klein : 59 F9 5E ED 1A 04 0C 08
+	test number :  1700000000   current u_klein : 69 59 5E 3D FA 14 0C 08
+	test number :  1800000000   current u_klein : 69 B9 4E 9D DA 24 0C 08
+	test number :  1900000000   current u_klein : 79 19 3E FD BA 34 0C 08
+	test number :  2000000000   current u_klein : 79 79 3E 5D 9A 44 0C 08
+	test number :  2100000000   current u_klein : 79 D9 2E BD 7A 54 0C 08
+	test number :  2200000000   current u_klein : 89 39 2E 1D 5A 64 0C 08
+	test number :  2300000000   current u_klein : 89 99 1E 7D 3A 74 0C 08
+	test number :  2400000000   current u_klein : 89 F9 0E DD 1A 84 0C 08
+	test number :  2500000000   current u_klein : 99 59 0E 2D FA 94 0C 08
+	test number :  2600000000   current u_klein : 99 A9 FE 8D DA A4 0C 08
+	test number :  2700000000   current u_klein : A9 09 EE ED BA B4 0C 08
+	test number :  2800000000   current u_klein : A9 69 EE 4D 9A C4 0C 08
+	test number :  2900000000   current u_klein : A9 C9 DE AD 7A D4 0C 08
+	test number :  3000000000   current u_klein : B9 29 DE 0D 5A E4 0C 08
+	test number :  3100000000   current u_klein : B9 89 CE 6D 3A F4 0C 08
+	test number :  3200000000   current u_klein : B9 E9 BE CD 2A 04 0C 08
+	test number :  3300000000   current u_klein : C9 49 BE 2D 0A 14 0C 08
+	test number :  3400000000   current u_klein : C9 A9 AE 7D EA 24 0C 08
+	test number :  3500000000   current u_klein : D9 09 9E DD CA 34 0C 08
+	test number :  3600000000   current u_klein : D9 69 9E 3D AA 44 0C 08
+	test number :  3700000000   current u_klein : D9 C9 8E 9D 8A 54 0C 08
+	test number :  3800000000   current u_klein : E9 29 7E FD 6A 64 0C 08
+	test number :  3900000000   current u_klein : E9 89 7E 5D 4A 74 0C 08
+	test number :  4000000000   current u_klein : E9 E9 6E BD 2A 84 0C 08
+	test number :  4100000000   current u_klein : F9 49 6E 1D 0A 94 0C 08
+	test number :  4200000000   current u_klein : F9 A9 5E 6D EA A4 0C 08
+Unsuccessful
+	test number :  3400000000   current u_klein : 0C 0A 0A 07 0E 02 00 00
+	test number :  3500000000   current u_klein : 0D 00 09 0D 0C 03 00 00
+	test number :  3600000000   current u_klein : 0D 06 09 03 0A 04 00 00
+	test number :  3700000000   current u_klein : 0D 0C 08 09 08 05 00 00
+	test number :  3800000000   current u_klein : 0E 02 07 0F 06 06 00 00
+	test number :  3900000000   current u_klein : 0E 08 07 05 04 07 00 00
+	test number :  4000000000   current u_klein : 0E 0E 06 0B 02 08 00 00
+	test number :  4100000000   current u_klein : 0F 04 06 01 00 09 00 00
+	test number :  4200000000   current u_klein : 0F 0A 05 06 0E 0A 00 00
+YAY ! The master key is :	   00    00

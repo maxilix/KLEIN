@@ -3,7 +3,7 @@
 
 
 
-
+/*
 int main(int argc, char const *argv[])
 {
 	int			cnt;
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
 			cnt++;
 		}
 	}
-	printf("\tWahou ! On en a chopé %d.\n",cnt);
+	printf("total : %d\n",cnt);
 	return 0;
 }
 
@@ -86,20 +86,19 @@ int main()
 
 
 
-/*
+
 int main(int argc, char const *argv[])
 {
-	u_klein				m1,m2;
-
-	str2u_klein(m1, "0x8E4DA1BC9FDC589D");
-	unmix_nibbles(m2,m1);
-	print_u_klein(m2,"");
+	u_klein				m;
+	init_generators();
+	for(int i = 0 ; i < 10000000 ; i++)
+		random_u_klein_rand(m);
+	print_u_klein(m,"r");
 
 
 
 	return 0;
-	// time 24.251
-}*/
+}
 
 /*
 int main(int argc, char const *argv[])
