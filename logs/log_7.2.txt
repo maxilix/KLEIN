@@ -1,0 +1,151 @@
+haynes generator seed : 2126776654
+start seven round attack
+differential initialization :	00 00 0B 00 00 00 00 00
+searching for couples
+	test number :   100000000   current u_klein : 82 54 66 79 42 F6 86 2B
+	test number :   200000000   current u_klein : B1 27 FA 41 2F 62 58 7A
+	Good couple found :	50 18 99 32 A6 BB D5 F4
+	test number :   300000000   current u_klein : 24 C8 7D 69 FA 9F 1F 3F
+	test number :   400000000   current u_klein : 76 6E 97 87 6D 3C A5 C2
+	test number :   500000000   current u_klein : 44 60 9E 67 71 4F 0C EF
+	test number :   600000000   current u_klein : 28 04 90 A0 62 ED D8 51
+	test number :   700000000   current u_klein : 9E 81 5B DC DB 7D A1 8F
+	test number :   800000000   current u_klein : 51 4F 86 62 BD 25 FA 11
+	test number :   900000000   current u_klein : FE 72 68 CD 25 26 B3 57
+	test number :  1000000000   current u_klein : F0 74 1F 41 C7 0A 81 16
+	test number :  1100000000   current u_klein : F1 89 68 1B 53 65 E2 D0
+	test number :  1200000000   current u_klein : AE F8 EC 6D FF DF 9F F5
+	test number :  1300000000   current u_klein : 82 0A 0F 63 21 C8 D7 8A
+	test number :  1400000000   current u_klein : 39 03 B2 E1 9F 4C 9C A5
+	test number :  1500000000   current u_klein : 4D 3B D0 F0 62 0E CF 58
+	test number :  1600000000   current u_klein : 5C E9 F3 63 F4 39 A1 C1
+	test number :  1700000000   current u_klein : 0F 63 8F 04 E1 48 18 4A
+	test number :  1800000000   current u_klein : E3 E1 74 77 26 0E C5 44
+	test number :  1900000000   current u_klein : 83 D8 BE 53 12 08 7A C3
+	test number :  2000000000   current u_klein : 7A 6F D6 3C 44 27 5B F6
+	test number :  2100000000   current u_klein : 75 EE 11 9A 9F D1 37 98
+	test number :  2200000000   current u_klein : FE 9A AF BD 45 80 FA E3
+	test number :  2300000000   current u_klein : A1 DC 4C 00 EC DA 73 F6
+	test number :  2400000000   current u_klein : 0A E8 91 A3 28 57 4B 54
+	Good couple found :	BD C1 EC C0 31 37 FE F6
+	test number :  2500000000   current u_klein : C4 F7 E2 CD 41 69 85 7D
+	Good couple found :	23 CC E5 B5 2B 8F 1D 67
+	test number :  2600000000   current u_klein : 7A 7E 5F 8E B1 0C 87 BB
+	test number :  2700000000   current u_klein : A9 95 A6 C0 23 15 CE 5A
+	test number :  2800000000   current u_klein : FB A2 7E 80 B1 7F 60 BB
+	test number :  2900000000   current u_klein : 0C 0C 2B 97 B9 D8 67 32
+	test number :  3000000000   current u_klein : 67 DA AF A3 DB B2 EF 71
+	test number :  3100000000   current u_klein : A9 72 F6 7C 16 0E 6E 77
+	test number :  3200000000   current u_klein : 5C 3B 97 AF BD 3A FC 53
+	test number :  3300000000   current u_klein : 3D 5C D8 A3 54 13 C2 E9
+	test number :  3400000000   current u_klein : B6 1C D9 F6 DE AC 11 53
+	test number :  3500000000   current u_klein : 83 D1 57 FE 72 F5 CB 57
+	test number :  3600000000   current u_klein : 2F D1 09 E8 B9 1F 70 8B
+	test number :  3700000000   current u_klein : 47 55 34 FA 6B D3 9C 02
+	test number :  3800000000   current u_klein : 75 A2 E9 40 B4 DB 32 F9
+	test number :  3900000000   current u_klein : 45 1F 03 00 0F 3F DA 30
+	test number :  4000000000   current u_klein : 53 E3 0D 05 1A 99 B1 D7
+	test number :  4100000000   current u_klein : 4A 64 69 35 F5 CC 6D D8
+	test number :  4200000000   current u_klein : A6 DA 18 7B 00 36 D6 54
+	Good couple found :	AB 0E AF F2 84 B4 3E 1C
+	test number :  4300000000   current u_klein : 01 9B 07 7B FE CC 76 DD
+	test number :  4400000000   current u_klein : 08 DD BE D0 B3 FD E3 F0
+	test number :  4500000000   current u_klein : 36 E8 82 4F A2 97 E0 E5
+	test number :  4600000000   current u_klein : 37 12 93 31 45 8D A2 33
+	test number :  4700000000   current u_klein : A6 A2 9D 19 81 E2 29 04
+	test number :  4800000000   current u_klein : 0E FE 38 43 92 A6 8E 08
+	test number :  4900000000   current u_klein : 0C 3E DA F0 F2 B6 1F C8
+	Good couple found :	AD 6C D5 2A F0 0D 68 D8
+	test number :  5000000000   current u_klein : 3A B8 63 7B 9D 98 DF 69
+	test number :  5100000000   current u_klein : 24 C3 DF C4 73 7D 9D 20
+	test number :  5200000000   current u_klein : 85 A5 B6 07 22 D8 49 05
+	test number :  5300000000   current u_klein : CA A5 5D 23 4C B2 57 16
+	test number :  5400000000   current u_klein : AD 1A D4 F3 E3 18 D5 8B
+	test number :  5500000000   current u_klein : AB 3B F8 56 8B 63 B2 C9
+	test number :  5600000000   current u_klein : 6D 5E 51 06 BA 9E 4E 74
+	test number :  5700000000   current u_klein : 71 BB 44 92 67 DE 45 87
+	test number :  5800000000   current u_klein : 72 A7 E1 93 FA A2 4F 6F
+	Good couple found :	71 47 12 E2 B4 9A D3 D0
+	test number :  5900000000   current u_klein : 0B 79 04 A8 FD 82 D5 F8
+	test number :  6000000000   current u_klein : A7 59 36 09 5C 1C E9 C7
+	test number :  6100000000   current u_klein : 02 BD CB 15 34 72 EB F5
+	test number :  6200000000   current u_klein : B8 BB D4 24 23 D7 48 7E
+	test number :  6300000000   current u_klein : 44 CB 3D 63 F9 AF 96 E5
+	test number :  6400000000   current u_klein : 61 13 8F DA C7 3D C6 F8
+	test number :  6500000000   current u_klein : 8B F9 FD 87 11 CF 67 43
+	Good couple found :	06 12 2A 50 D4 12 EB 78
+	test number :  6600000000   current u_klein : 6E B5 C9 70 9B FC 2E 73
+	test number :  6700000000   current u_klein : 86 9E BE 72 5A 76 E9 4B
+	test number :  6800000000   current u_klein : 8C E9 56 54 B6 F3 E4 D4
+	test number :  6900000000   current u_klein : FE EE 04 C2 58 ED 6E 72
+	test number :  7000000000   current u_klein : 76 F4 DA 51 4A 81 91 CB
+	test number :  7100000000   current u_klein : A1 41 A3 BF B7 7C FF F1
+	test number :  7200000000   current u_klein : 09 3B F7 4F 5E 28 B1 C2
+	test number :  7300000000   current u_klein : 4A FA 1C 8E FD ED C3 7E
+	test number :  7400000000   current u_klein : FF D4 32 A1 D5 BC 7F 14
+	test number :  7500000000   current u_klein : B5 31 25 F2 76 4D 5E 63
+	test number :  7600000000   current u_klein : 06 56 6D 95 B4 70 A0 0B
+	test number :  7700000000   current u_klein : 8E 6A 5F A6 A4 D8 BC 9F
+	test number :  7800000000   current u_klein : E9 C5 0C 28 CC DA 1C B0
+	test number :  7900000000   current u_klein : A2 CD 5F F5 B4 4D DC F8
+	test number :  8000000000   current u_klein : 65 A8 D2 F1 A5 A3 B2 52
+	test number :  8100000000   current u_klein : BC AD D8 F4 E9 8C BF E9
+	test number :  8200000000   current u_klein : 34 24 73 A2 2D 02 1B 23
+	test number :  8300000000   current u_klein : 88 52 7E 93 5E E7 91 DC
+	test number :  8400000000   current u_klein : 24 9F 71 5B CB 43 2C 7C
+	Good couple found :	99 2D 07 54 11 56 A4 11
+start kTilde search
+	test number :   100000000   current u_klein : 00 05 0F 05 0E 01 00 00
+	test number :   200000000   current u_klein : 00 0B 0E 0B 0C 02 00 00
+	test number :   300000000   current u_klein : 01 01 0E 01 0A 03 00 00
+	test number :   400000000   current u_klein : 01 07 0D 07 08 04 00 00
+	test number :   500000000   current u_klein : 01 0D 0C 0D 06 05 00 00
+	test number :   600000000   current u_klein : 02 03 0C 03 04 06 00 00
+	test number :   700000000   current u_klein : 02 09 0B 09 02 07 00 00
+	test number :   800000000   current u_klein : 02 0F 0A 0F 00 08 00 00
+	test number :   900000000   current u_klein : 03 05 0A 04 0E 09 00 00
+	test number :  1000000000   current u_klein : 03 0B 09 0A 0C 0A 00 00
+	test number :  1100000000   current u_klein : 04 01 09 00 0A 0B 00 00
+	test number :  1200000000   current u_klein : 04 07 08 06 08 0C 00 00
+	test number :  1300000000   current u_klein : 04 0D 07 0C 06 0D 00 00
+	test number :  1400000000   current u_klein : 05 03 07 02 04 0E 00 00
+	test number :  1500000000   current u_klein : 05 09 06 08 02 0F 00 00
+	test number :  1600000000   current u_klein : 05 0F 05 0E 01 00 00 00
+	test number :  1700000000   current u_klein : 06 05 05 03 0F 01 00 00
+	test number :  1800000000   current u_klein : 06 0B 04 09 0D 02 00 00
+	test number :  1900000000   current u_klein : 07 01 03 0F 0B 03 00 00
+	test number :  2000000000   current u_klein : 07 07 03 05 09 04 00 00
+	test number :  2100000000   current u_klein : 07 0D 02 0B 07 05 00 00
+	test number :  2200000000   current u_klein : 08 03 02 01 05 06 00 00
+	test number :  2300000000   current u_klein : 08 09 01 07 03 07 00 00
+	test number :  2400000000   current u_klein : 08 0F 00 0D 01 08 00 00
+	test number :  2500000000   current u_klein : 09 05 00 02 0F 09 00 00
+	test number :  2600000000   current u_klein : 09 0A 0F 08 0D 0A 00 00
+	test number :  2700000000   current u_klein : 0A 00 0E 0E 0B 0B 00 00
+	test number :  2800000000   current u_klein : 0A 06 0E 04 09 0C 00 00
+	test number :  2900000000   current u_klein : 0A 0C 0D 0A 07 0D 00 00
+	test number :  3000000000   current u_klein : 0B 02 0D 00 05 0E 00 00
+	test number :  3100000000   current u_klein : 0B 08 0C 06 03 0F 00 00
+	test number :  3200000000   current u_klein : 0B 0E 0B 0C 02 00 00 00
+	test number :  3300000000   current u_klein : 0C 04 0B 02 00 01 00 00
+	test number :  3400000000   current u_klein : 0C 0A 0A 07 0E 02 00 00
+	test number :  3500000000   current u_klein : 0D 00 09 0D 0C 03 00 00
+	test number :  3600000000   current u_klein : 0D 06 09 03 0A 04 00 00
+	test number :  3700000000   current u_klein : 0D 0C 08 09 08 05 00 00
+	test number :  3800000000   current u_klein : 0E 02 07 0F 06 06 00 00
+Good k tilde found with 1/8 errors : 0E 08 00 05 06 06 0E 07
+start full key search
+	test number :   100000000   current u_klein : 00 55 F6 56 EE 17 0E 08
+	test number :   200000000   current u_klein : 00 B5 E6 B6 CE 27 0E 08
+	test number :   300000000   current u_klein : 10 15 E6 16 AE 37 0E 08
+	test number :   400000000   current u_klein : 10 75 D6 76 8E 47 0E 08
+	test number :   500000000   current u_klein : 10 D5 C6 D6 6E 57 0E 08
+	test number :   600000000   current u_klein : 20 35 C6 36 4E 67 0E 08
+	test number :   700000000   current u_klein : 20 95 B6 96 2E 77 0E 08
+	test number :   800000000   current u_klein : 20 F5 A6 F6 0E 87 0E 08
+	test number :   900000000   current u_klein : 30 55 A6 46 EE 97 0E 08
+	test number :  1000000000   current u_klein : 30 B5 96 A6 CE A7 0E 08
+	test number :  1100000000   current u_klein : 40 15 96 06 AE B7 0E 08
+goodCouples saved in couples/seven_rounds/0x1111111111111111.txt
+Attack completed
+The master key is :	11 11 11 11 11 11 11 11

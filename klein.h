@@ -134,24 +134,3 @@ void 	random_u_klein_haynes(u_klein rop);
 Bool	verify_good_couple_condition_cheating(u_klein const m1, u_klein const m2);
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
